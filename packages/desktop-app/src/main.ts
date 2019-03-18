@@ -49,6 +49,7 @@ const createWindow = () => {
 }
 
 const generateMenu = () => {
+  // cSpell:disable
   const template = [
     {
       label: 'File',
@@ -87,6 +88,7 @@ const generateMenu = () => {
       submenu: [{ role: 'minimize' }, { role: 'close' }],
     },
   ]
+  // cSpell:enable
 
   Menu.setApplicationMenu(Menu.buildFromTemplate(template as any))
 }
