@@ -2,6 +2,22 @@
   "extends": "tslint-config-airbnb",
   "rules": {
     "semicolon": false,
-    "trailing-comma": false
+    "trailing-comma": false,
+    "eofline": {
+      "severity": "warn"
+    },
+    "no-consecutive-blank-lines": {
+      "severity": "warn"
+    },
+    "quotemark": {
+      "severity": "warn",
+      "options": "single"
+    },
+    "no-trailing-whitespace": {
+      "severity": "warn"
+    },
+    "ordered-imports": {
+      "severity": "warn"
+    }
   }
 }
