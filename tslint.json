@@ -11,13 +11,19 @@
     },
     "quotemark": {
       "severity": "warn",
-      "options": "single"
+      "options": ["single", "jsx-double"]
     },
     "no-trailing-whitespace": {
       "severity": "warn"
     },
     "ordered-imports": {
       "severity": "warn"
-    }
+    },
+    "import-name": [
+      true,
+      {
+        "react": "React"
+      }
+    ]
   }
 }
