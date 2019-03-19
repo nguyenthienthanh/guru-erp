@@ -59,8 +59,26 @@
     "workspaces",
     "xunit"
   ],
+  "cSpell.languageSettings": [
+    { "languageId": "*", "local": "en", "dictionaries": ["wordsEn"] },
+    { "languageId": "*", "local": "en-US", "dictionaries": ["wordsEn"] },
+    { "languageId": "*", "local": "en-GB", "dictionaries": ["wordsEnGb"] },
+    { "languageId": "*", "dictionaries": ["companies", "softwareTerms", "misc"] },
+    { "languageId": "python", "allowCompoundWords": true, "dictionaries": ["python"] },
+    { "languageId": "go", "allowCompoundWords": true, "dictionaries": ["go"] },
+    { "languageId": "javascript", "dictionaries": ["typescript", "node"] },
+    { "languageId": "javascriptreact", "dictionaries": ["typescript", "node"] },
+    { "languageId": "typescript", "dictionaries": ["typescript", "node"] },
+    { "languageId": "typescriptreact", "dictionaries": ["typescript", "node"] },
+    { "languageId": "html", "dictionaries": ["html", "fonts", "typescript", "css"] },
+    { "languageId": "php", "dictionaries": ["php", "html", "fonts", "css", "typescript"] },
+    { "languageId": "css", "dictionaries": ["fonts", "css"] },
+    { "languageId": "less", "dictionaries": ["fonts", "css"] },
+    { "languageId": "scss", "dictionaries": ["fonts", "css"] }
+  ],
   "editor.rulers": [100, 120],
   "files.eol": "\r\n",
   "files.insertFinalNewline": true,
-  "terminal.integrated.fontFamily": "Menlo, Monaco, 'Courier New', monospace"
+  "terminal.integrated.fontFamily": "Menlo, Monaco, 'Courier New', monospace",
+  "eslint.enable": false
 }
