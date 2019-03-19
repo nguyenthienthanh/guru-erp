@@ -1,9 +1,6 @@
 {
   "compilerOptions": {
     "rootDirs": ["src", "stories"],
-    "baseUrl": "src",
-    "paths": {
-      "components/*": ["src/components/*"]
-    }
+    "baseUrl": "src"
   }
 }
