@@ -1,0 +1,6 @@
+{
+  "compilerOptions": {
+    "rootDirs": ["src", "stories"],
+    "baseUrl": "src"
+  }
+}
