@@ -10,8 +10,10 @@
     "url": "git+ssh://git@bitbucket.org/targeek/guru-erp.git"
   },
   "scripts": {
-    "test": "echo \"Error: run tests from root\" && exit 1",
-    "build": "rimraf dist && tsc",
+    "test": "yarn lint && yarn build",
+    "clean": "rimraf dist",
+    "lint": "tslint --project tsconfig.json \"src/**/*.ts\"",
+    "build": "yarn clean && tsc",
     "build:watch": "tsc --watch",
     "start": "yarn build && concurrently \"yarn build:watch\" \"cross-env BROWSER=none yarn workspace @guru-erp/web start\" \"wait-on http://localhost:3000 && electron dist/main.js\""
   },
@@ -27,7 +29,9 @@
     "electron": "^4.1.0",
     "electron-devtools-installer": "^2.2.4",
     "electron-reload": "^1.4.0",
+    "prettier": "^1.16.4",
     "rimraf": "^2.6.3",
+    "tslint": "^5.14.0",
     "typescript": "^3.3.3333",
     "wait-on": "^3.2.0"
   }

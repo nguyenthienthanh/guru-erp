@@ -1,27 +1,28 @@
 import React, { Component } from 'react'
+
+import MaterialUIProvider from 'providers/MaterialUIProvider'
+
 import logoSvg from './logo.svg'
 
+import { Button } from '@material-ui/core'
 import './App.css'
 
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logoSvg} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.tsx</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
-      </div>
+      <MaterialUIProvider>
+        <div className="App">
+          <header className="App-header">
+            <img src={logoSvg} className="App-logo" alt="logo" />
+            <p>
+              Edit <code>src/App.tsx</code> and save to reload.
+            </p>
+            <Button variant="contained" color="primary">
+              Learn React
+            </Button>
+          </header>
+        </div>
+      </MaterialUIProvider>
     )
   }
 }

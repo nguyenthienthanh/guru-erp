@@ -27,6 +27,10 @@
     ],
     "align": {
       "severity": "warn"
-    }
+    },
+    "object-curly-spacing": {
+      "severity": "warn"
+    },
+    "ter-arrow-parens": [true, "always"]
   }
 }

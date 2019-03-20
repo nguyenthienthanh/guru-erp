@@ -1,10 +1,13 @@
+import React from 'react'
+
 import { withInfo } from '@storybook/addon-info'
 import { addDecorator, configure } from '@storybook/react'
 import { setDefaults } from 'react-storybook-addon-props-combinations'
 
+import MaterialUIProvider from '../src/providers/MaterialUIProvider'
+
 // automatically import all files ending in *.stories.tsx
-const storiesDir = require.context('../stories', true, /.stories.tsx$/)
-const componentsDir = require.context('../src/components', true, /.stories.tsx$/)
+const componentsDir = require.context('../src/components', true, /.(stories|story).tsx$/)
 
 function loadStories() {
   addDecorator(
@@ -27,7 +30,8 @@ function loadStories() {
     }),
   )
 
-  storiesDir.keys().forEach(storiesDir)
+  addDecorator((story) => <MaterialUIProvider>{story()}</MaterialUIProvider>)
+
   componentsDir.keys().forEach(componentsDir)
 }
 
