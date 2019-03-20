@@ -1,0 +1,24 @@
+{
+  "name": "@guru-erp/locales",
+  "version": "0.0.0",
+  "description": "",
+  "author": "Dương Đỗ <dustin.do95@gmail.com>",
+  "homepage": "https://github.com/targeek/guru-erp#readme",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/targeek/guru-erp.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: run tests from root\" && exit 1",
+    "build": "ts-node --transpile-only src/builder.ts"
+  },
+  "bugs": {
+    "url": "https://github.com/targeek/guru-erp/issues"
+  },
+  "devDependencies": {
+    "@types/node": "^11.11.4",
+    "ts-node": "^8.0.3",
+    "typescript": "^3.3.4000"
+  }
+}
