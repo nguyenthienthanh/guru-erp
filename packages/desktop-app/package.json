@@ -18,21 +18,21 @@
     "start": "yarn build && concurrently \"yarn build:watch\" \"cross-env BROWSER=none yarn workspace @guru-erp/web start\" \"wait-on http://localhost:3000 && electron dist/main.js\""
   },
   "dependencies": {
-    "electron-is-dev": "^1.0.1"
+    "electron-is-dev": "1.0.1"
   },
   "devDependencies": {
-    "@types/electron-devtools-installer": "^2.2.0",
-    "@types/electron-is-dev": "^0.3.0",
-    "@types/node": "^11.11.3",
-    "concurrently": "^4.1.0",
-    "cross-env": "^5.2.0",
-    "electron": "^4.1.0",
-    "electron-devtools-installer": "^2.2.4",
-    "electron-reload": "^1.4.0",
-    "prettier": "^1.16.4",
-    "rimraf": "^2.6.3",
-    "tslint": "^5.14.0",
-    "typescript": "^3.3.3333",
-    "wait-on": "^3.2.0"
+    "@types/electron-devtools-installer": "2.2.0",
+    "@types/electron-is-dev": "0.3.0",
+    "@types/node": "11.11.3",
+    "concurrently": "4.1.0",
+    "cross-env": "5.2.0",
+    "electron": "4.1.0",
+    "electron-devtools-installer": "2.2.4",
+    "electron-reload": "1.4.0",
+    "prettier": "1.16.4",
+    "rimraf": "2.6.3",
+    "tslint": "5.14.0",
+    "typescript": "3.3.3333",
+    "wait-on": "3.2.0"
   }
 }
