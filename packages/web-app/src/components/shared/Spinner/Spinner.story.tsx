@@ -5,7 +5,7 @@ import { storiesOf } from '@storybook/react'
 
 import Spinner, { SpinnerProps } from './Spinner'
 
-const stories = storiesOf('Components', module)
+const stories = storiesOf('Shared components', module)
 
 stories.addDecorator(withKnobs)
 

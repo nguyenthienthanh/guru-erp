@@ -7,7 +7,7 @@ import { setDefaults } from 'react-storybook-addon-props-combinations'
 import MaterialUIProvider from '../src/providers/MaterialUIProvider'
 
 // automatically import all files ending in *.stories.tsx
-const componentsDir = require.context('../src/components', true, /.stories.tsx$/)
+const componentsDir = require.context('../src/components', true, /.(stories|story).tsx$/)
 
 function loadStories() {
   addDecorator(
