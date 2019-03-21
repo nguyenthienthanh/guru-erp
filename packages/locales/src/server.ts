@@ -24,8 +24,9 @@ const loadTranslation = (lng: string, ns: string) => {
 }
 
 const saveTranslation = (translation: object, lng: string, ns: string) => {
-  if (!fs.existsSync(path.resolve(__dirname, `../languages/${lng}`))) {
-    fs.mkdirSync(path.resolve(__dirname, `../languages/${lng}`))
+  const transPath = path.resolve(__dirname, `../languages/${lng}`)
+  if (!fs.existsSync(transPath)) {
+    fs.mkdirSync(transPath)
   }
 
   fs.writeFileSync(
