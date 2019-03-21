@@ -22,7 +22,8 @@
     "import-name": [
       true,
       {
-        "react": "React"
+        "react": "React",
+        "reactDom": "ReactDOM"
       }
     ],
     "align": {
@@ -31,6 +32,7 @@
     "object-curly-spacing": {
       "severity": "warn"
     },
-    "ter-arrow-parens": [true, "always"]
+    "ter-arrow-parens": [true, "always"],
+    "max-line-length": false
   }
 }

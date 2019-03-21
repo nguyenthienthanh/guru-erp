@@ -47,6 +47,7 @@
     "prestart",
     "refetch",
     "repo",
+    "respawn",
     "retryable",
     "scrollable",
     "storysource",

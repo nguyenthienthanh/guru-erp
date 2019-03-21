@@ -1,0 +1,24 @@
+{
+  "compilerOptions": {
+    "esModuleInterop": true,
+    "noImplicitAny": true,
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "lib": ["es2015"],
+    "pretty": true,
+    "types": ["jest", "node"],
+    "sourceMap": true,
+    "target": "es6",
+    "baseUrl": "src",
+    "rootDir": "src",
+    "typeRoots": ["src/types"],
+    "outDir": "dist",
+    "allowSyntheticDefaultImports": true,
+    "resolveJsonModule": true,
+    "paths": {
+      "@guru-erp/*": ["../../*"],
+      "*": ["types/*", "*"]
+    }
+  },
+  "exclude": ["node_modules", "src/test"]
+}

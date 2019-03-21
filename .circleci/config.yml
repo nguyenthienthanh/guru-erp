@@ -34,3 +34,4 @@ jobs:
           yarn workspace @guru-erp/web test
           yarn workspace @guru-erp/desktop test
           yarn workspace @guru-erp/web build
+          yarn workspace @guru-erp/server test
