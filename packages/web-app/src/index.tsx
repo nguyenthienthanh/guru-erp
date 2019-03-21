@@ -3,12 +3,18 @@ import { render } from 'react-dom'
 
 import * as serviceWorker from './serviceWorker'
 
-import 'helpers/i18next'
 import './index.css'
+
+import 'helpers/i18next'
 
 import App from './App'
 
-render(<App />, document.getElementById('root'))
+render(
+  <React.Suspense fallback="loading">
+    <App />
+  </React.Suspense>,
+  document.getElementById('root'),
+)
 
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.
