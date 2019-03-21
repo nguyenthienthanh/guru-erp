@@ -18,27 +18,27 @@
     "url": "https://github.com/targeek/guru-erp/issues"
   },
   "devDependencies": {
-    "@types/body-parser": "^1.17.0",
-    "@types/cors": "^2.8.4",
-    "@types/express": "^4.16.1",
-    "@types/express-winston": "^3.0.1",
-    "@types/i18next-node-fs-backend": "^0.0.30",
-    "@types/lodash": "^4.14.123",
+    "@types/body-parser": "1.17.0",
+    "@types/cors": "2.8.4",
+    "@types/express": "4.16.1",
+    "@types/express-winston": "3.0.1",
+    "@types/i18next-node-fs-backend": "0.0.30",
+    "@types/lodash": "4.14.123",
     "@types/node": "11.11.4",
     "ts-node": "8.0.3",
-    "ts-node-dev": "^1.0.0-pre.32",
+    "ts-node-dev": "1.0.0-pre.32",
     "typescript": "3.3.4000"
   },
   "dependencies": {
-    "body-parser": "^1.18.3",
-    "cors": "^2.8.5",
-    "express": "^4.16.4",
-    "express-winston": "^3.1.0",
-    "i18next": "^15.0.7",
-    "i18next-express-middleware": "^1.7.3",
-    "i18next-node-fs-backend": "^2.1.1",
-    "i18next-xhr-backend": "^2.0.1",
-    "lodash": "^4.17.11",
-    "winston": "^3.2.1"
+    "body-parser": "1.18.3",
+    "cors": "2.8.5",
+    "express": "4.16.4",
+    "express-winston": "3.1.0",
+    "i18next": "15.0.7",
+    "i18next-express-middleware": "1.7.3",
+    "i18next-node-fs-backend": "2.1.1",
+    "i18next-xhr-backend": "2.0.1",
+    "lodash": "4.17.11",
+    "winston": "3.2.1"
   }
 }
