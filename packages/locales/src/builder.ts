@@ -1,12 +1,14 @@
 import fs from 'fs'
 import path from 'path'
 
+import logger from './logger'
+
 const builder = () => {
   const languagesDirPath = path.resolve(__dirname, '../languages')
 
   const languages = fs.readdirSync(languagesDirPath)
 
-  console.log('Detected languages', languages)
+  logger.info('Detected languages', languages)
 
   const locales: any = {}
 
@@ -18,18 +20,20 @@ const builder = () => {
       .readdirSync(lngDirPath)
       .map((ns) => ns.replace(/\.json$/, '').replace(/\.missing/, ''))
 
-    console.log(`[lng] Detected namespaces`, namespaces)
+    logger.info(`[lng] Detected namespaces`, namespaces)
 
     namespaces.forEach((ns) => {
       locales[lng][ns] = {}
 
       try {
-        const translations = fs.existsSync(path.resolve(lngDirPath, `${ns}.json`))
-          ? JSON.parse(fs.readFileSync(path.resolve(lngDirPath, `${ns}.json`)).toString())
+        const transPath = path.resolve(lngDirPath, `${ns}.json`)
+        const translations = fs.existsSync(transPath)
+          ? JSON.parse(fs.readFileSync(transPath).toString())
           : {}
 
-        const missingTranslations = fs.existsSync(path.resolve(lngDirPath, `${ns}.missing.json`))
-          ? JSON.parse(fs.readFileSync(path.resolve(lngDirPath, `${ns}.missing.json`)).toString())
+        const missingTransPath = path.resolve(lngDirPath, `${ns}.missing.json`)
+        const missingTranslations = fs.existsSync(missingTransPath)
+          ? JSON.parse(fs.readFileSync(missingTransPath).toString())
           : {}
 
         locales[lng][ns] = { ...translations, ...missingTranslations }
@@ -39,11 +43,11 @@ const builder = () => {
     })
   })
 
-  console.log(`Generated locales\n`, locales)
+  logger.info(`Generated locales\n`, locales)
 
   fs.writeFileSync(path.resolve(__dirname, '../locales.json'), JSON.stringify(locales))
 
-  console.log(`Exported locales to locales.json`)
+  logger.info(`Exported locales to locales.json`)
 }
 
 export default builder
