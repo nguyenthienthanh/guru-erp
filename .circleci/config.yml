@@ -30,6 +30,7 @@ jobs:
 
       # run tests!
       - run: |
+          yarn workspace @guru-erp/locales build
           yarn workspace @guru-erp/web test
           yarn workspace @guru-erp/desktop test
           yarn workspace @guru-erp/web build
