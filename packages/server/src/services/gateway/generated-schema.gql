@@ -1,0 +1,9 @@
+scalar Date
+
+scalar Empty
+
+scalar JSON
+
+type Query {
+  _empty: Empty
+}

@@ -1,3 +1,4 @@
+import fs from 'fs'
 import gql from 'gql-tag'
 import { ServiceSchema } from 'moleculer'
 // tslint:disable-next-line:import-name
@@ -41,6 +42,14 @@ const apiService: ServiceSchema = {
       },
     }),
   ],
+
+  events: {
+    // tslint:disable-next-line:function-name
+    'graphql.schema.updated'({ schema }) {
+      fs.writeFileSync(`${__dirname}/generated-schema.gql`, schema, 'utf8')
+      this.logger.info(`Generated GraphQL schema:\n\n${schema}`)
+    },
+  },
 
   // More info about settings: https://moleculer.services/docs/0.13/moleculer-web.html
   settings: {
