@@ -1991,10 +1991,10 @@
     mkdirp "^0.5.1"
     rimraf "^2.5.2"
 
-"@material-ui/core@4.0.0-alpha.4":
-  version "4.0.0-alpha.4"
-  resolved "https://registry.yarnpkg.com/@material-ui/core/-/core-4.0.0-alpha.4.tgz#e7a4bd231fee1d11ed3f58223daa19ff3321858f"
-  integrity sha512-q+qfoYh+i9GEpVdpdBLG1R9IobBSaMbU/k43O3mg+uav7gumamdPvGIMJU70ztYkAZWYYZKZWyhnt1EbJAp5PA==
+"@material-ui/core@4.0.0-alpha.5":
+  version "4.0.0-alpha.5"
+  resolved "https://registry.yarnpkg.com/@material-ui/core/-/core-4.0.0-alpha.5.tgz#9b0b8b45099ff0d84eed02f35920ed737241aa31"
+  integrity sha512-+UYILu/CT4mtiq5YumcdOwLxaONM7/XrFvXxb36Zqh4dSJYgycuU4fzs9qs9xtxC0wUQFt4ZoUxRS+3wNSYtVg==
   dependencies:
     "@babel/runtime" "^7.2.0"
     "@material-ui/styles" "^4.0.0-alpha.4"
@@ -2014,7 +2014,29 @@
     react-transition-group "^2.5.3"
     warning "^4.0.1"
 
-"@material-ui/styles@4.0.0-alpha.4", "@material-ui/styles@^4.0.0-alpha.4":
+"@material-ui/styles@4.0.0-alpha.5":
+  version "4.0.0-alpha.5"
+  resolved "https://registry.yarnpkg.com/@material-ui/styles/-/styles-4.0.0-alpha.5.tgz#95376eb2347a3c13a93de916982a4003a66a2e04"
+  integrity sha512-8O+2fn3f7c7dhqZ4C0T6nfq0uVnQgU45kFuzfQq0m0Cu2lFqsqZtaFlGFs6moAaU/x/PP1Vqz6RnmPRXAj+4jQ==
+  dependencies:
+    "@babel/runtime" "^7.2.0"
+    "@emotion/hash" "^0.7.1"
+    "@material-ui/utils" "^4.0.0-alpha.4"
+    clsx "^1.0.2"
+    deepmerge "^3.0.0"
+    hoist-non-react-statics "^3.2.1"
+    jss "^10.0.0-alpha.12"
+    jss-plugin-camel-case "^10.0.0-alpha.12"
+    jss-plugin-default-unit "^10.0.0-alpha.12"
+    jss-plugin-global "^10.0.0-alpha.12"
+    jss-plugin-nested "^10.0.0-alpha.12"
+    jss-plugin-props-sort "^10.0.0-alpha.12"
+    jss-plugin-rule-value-function "^10.0.0-alpha.12"
+    jss-plugin-vendor-prefixer "^10.0.0-alpha.12"
+    prop-types "^15.7.2"
+    warning "^4.0.1"
+
+"@material-ui/styles@^4.0.0-alpha.4":
   version "4.0.0-alpha.4"
   resolved "https://registry.yarnpkg.com/@material-ui/styles/-/styles-4.0.0-alpha.4.tgz#86cf04b8b987d9fa3d2f003da4d61ceee976724e"
   integrity sha512-hNrBcqz3FQjLU73gOxPAvlA6VRWoxTj3z+PJijhVZ4U24JbVFumjS5ZYflT4BqRLBUFEKU0u1c5NimqAEXYm8A==
