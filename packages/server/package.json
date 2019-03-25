@@ -35,7 +35,7 @@
   "dependencies": {
     "gql-tag": "1.0.1",
     "graphql": "14.1.1",
-    "ioredis": "4.6.2",
+    "ioredis": "4.9.0",
     "moleculer": "0.13.8",
     "moleculer-apollo-server": "moleculerjs/moleculer-apollo-server",
     "moleculer-web": "0.9.0-beta2",
