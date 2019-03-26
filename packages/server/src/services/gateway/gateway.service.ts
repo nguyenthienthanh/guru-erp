@@ -1,6 +1,7 @@
 import { IAccount } from '@guru-erp/interfaces'
 import fs from 'fs'
 import gql from 'graphql-tag'
+import { express as voyagerMiddleware } from 'graphql-voyager/middleware'
 import { ServerResponse } from 'http'
 import { verify } from 'jsonwebtoken'
 import { Context, ServiceSchema } from 'moleculer'
@@ -69,6 +70,16 @@ const gatewayService: ServiceSchema = {
   // More info about settings: https://moleculer.services/docs/0.13/moleculer-web.html
   settings: {
     port: +process.env.PORT || 3000,
+    routes: [
+      {
+        path: '/voyager',
+        use: [
+          voyagerMiddleware({
+            endpointUrl: '/graphql',
+          }),
+        ],
+      },
+    ],
   },
 }
 
