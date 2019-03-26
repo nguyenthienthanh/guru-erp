@@ -1,9 +1,20 @@
+type Account {
+  id: ID!
+  email: String!
+  avatar: String
+}
+
 scalar Date
 
 scalar Empty
 
 scalar JSON
 
+type Mutation {
+  createAccount(email: String!, password: String!): Account
+  signIn(email: String!, password: String!): String
+}
+
 type Query {
-  _empty: Empty
+  authenticate: Account
 }

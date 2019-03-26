@@ -1,6 +1,9 @@
 'use strict'
 import { BrokerOptions, Errors } from 'moleculer'
 
+// tslint:disable-next-line:import-name
+import YupValidator from 'utils/moleculer-yup-validator'
+
 require('utils/dotenv.js')()
 
 /**
@@ -121,7 +124,7 @@ const brokerConfig: BrokerOptions = {
   // Enable parameters validation. More info: https://moleculer.services/docs/0.13/validating.html
   validation: true,
   // Custom Validator class for validation.
-  validator: null,
+  validator: new YupValidator(),
 
   // Enable metrics function. More info: https://moleculer.services/docs/0.13/metrics.html
   metrics: false,

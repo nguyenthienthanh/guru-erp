@@ -1,0 +1,18 @@
+{
+  "name": "@guru-erp/interfaces",
+  "version": "0.0.0",
+  "description": "Types and interfaces for Guru ERP project",
+  "author": "Dương Đỗ <dustin.do95@gmail.com>",
+  "homepage": "https://github.com/targeek/guru-erp#readme",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/targeek/guru-erp.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: run tests from root\" && exit 1"
+  },
+  "bugs": {
+    "url": "https://github.com/targeek/guru-erp/issues"
+  }
+}

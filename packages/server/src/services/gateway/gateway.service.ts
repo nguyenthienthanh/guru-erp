@@ -1,13 +1,18 @@
+import { IAccount } from '@guru-erp/interfaces'
 import fs from 'fs'
-import gql from 'gql-tag'
-import { ServiceSchema } from 'moleculer'
+import gql from 'graphql-tag'
+import { ServerResponse } from 'http'
+import { verify } from 'jsonwebtoken'
+import { Context, ServiceSchema } from 'moleculer'
 // tslint:disable-next-line:import-name
 import { ApolloService } from 'moleculer-apollo-server'
 // tslint:disable-next-line:import-name
 import ApiGateway from 'moleculer-web'
 
-const apiService: ServiceSchema = {
-  name: 'api',
+const gatewayService: ServiceSchema = {
+  name: 'gateway',
+
+  dependencies: ['accounts'],
 
   mixins: [
     ApiGateway, // GraphQL Apollo Server
@@ -17,9 +22,6 @@ const apiService: ServiceSchema = {
         scalar Empty
         scalar Date
         scalar JSON
-        type Query {
-          _empty: Empty
-        }
       `,
 
       // Global resolvers
@@ -30,6 +32,19 @@ const apiService: ServiceSchema = {
         path: '/graphql',
         cors: true,
         mappingPolicy: 'restrict',
+        async onBeforeCall(ctx: Context, route: string, req: any, res: ServerResponse) {
+          const accessToken =
+            req.headers['x-access-token'] || req.query['accessToken'] || req.query['token']
+
+          if (accessToken) {
+            ctx.meta.accessToken = accessToken
+
+            const account: IAccount = (await verify(accessToken, process.env.JWT_SECRET)) as any
+
+            ctx.meta.account = account
+            ctx.meta.accountId = account.id
+          }
+        },
       },
 
       // https://www.apollographql.com/docs/apollo-server/v2/api/apollo-server.html
@@ -57,4 +72,4 @@ const apiService: ServiceSchema = {
   },
 }
 
-export = apiService
+export = gatewayService

@@ -1,6 +1,3 @@
 {
-  "extends": "../../tslint.json",
-  "rules": {
-    "import-name": [true, { "gqlTag": "gql" }]
-  }
+  "extends": "../../tslint.json"
 }

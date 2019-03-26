@@ -1,6 +1,7 @@
 {
   "name": "root",
   "private": true,
+  "license": "GPL",
   "scripts": {
     "clean": "lerna clean -y && rm -f {packages/*/,}yarn.lock",
     "reinstall": "yarn clean && lerna bootstrap"

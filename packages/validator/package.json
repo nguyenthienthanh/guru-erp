@@ -1,0 +1,37 @@
+{
+  "name": "@guru-erp/validator",
+  "version": "0.0.0",
+  "description": "Yup validators for Guru ERP project",
+  "author": "Dương Đỗ <dustin.do95@gmail.com>",
+  "homepage": "https://github.com/targeek/guru-erp#readme",
+  "license": "ISC",
+  "main": "lib/index.js",
+  "directories": {
+    "lib": "lib",
+    "test": "__tests__"
+  },
+  "files": [
+    "lib"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/targeek/guru-erp.git"
+  },
+  "scripts": {
+    "test": "yarn build",
+    "clean": "rimraf lib",
+    "build": "yarn clean && tsc",
+    "start": "tsc --watch"
+  },
+  "bugs": {
+    "url": "https://github.com/targeek/guru-erp/issues"
+  },
+  "dependencies": {
+    "yup": "^0.27.0"
+  },
+  "devDependencies": {
+    "@types/yup": "^0.26.12",
+    "rimraf": "^2.6.3",
+    "typescript": "^3.3.4000"
+  }
+}
