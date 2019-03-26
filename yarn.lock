@@ -11803,10 +11803,10 @@ moleculer-apollo-server@moleculerjs/moleculer-apollo-server:
     graphql-upload "^8.0.4"
     lodash "^4.17.11"
 
-moleculer-repl@0.5.6:
-  version "0.5.6"
-  resolved "https://registry.yarnpkg.com/moleculer-repl/-/moleculer-repl-0.5.6.tgz#690195fb3966428fbabcce01962d700f72b1d86c"
-  integrity sha512-VuA32BtvRm0T/ACVex0+VlbvUGC1O7nYals8LyCXj9AD/nQcRkEAsmzIFYzPDcox/pg8jZNcC5MNT5se/aGV9Q==
+moleculer-repl@0.5.7:
+  version "0.5.7"
+  resolved "https://registry.yarnpkg.com/moleculer-repl/-/moleculer-repl-0.5.7.tgz#a5730879ff52f34e18f063eb0f90f07da315fd78"
+  integrity sha512-ZfCTVKtAbMuWc/NCqq2KmF7AcIkcq7sefhoOm3FbMw775kRhmF5Jsov9rQO0xuETT33MxpeNqLrfClcgeEFrlg==
   dependencies:
     chalk "^2.4.2"
     clui "^0.3.6"
