@@ -30,8 +30,8 @@
     "yup": "^0.27.0"
   },
   "devDependencies": {
-    "@types/yup": "^0.26.12",
-    "rimraf": "^2.6.3",
-    "typescript": "^3.3.4000"
+    "@types/yup": "0.26.12",
+    "rimraf": "2.6.3",
+    "typescript": "3.3.4000"
   }
 }
