@@ -14,9 +14,11 @@ export const createTestBroker = (logLevel = process.env.LOGLEVEL) =>
 export const loadAllServices = (broker: ServiceBroker) => {
   const gatewayService = require('services/gateway/gateway.service')
   const accountsService = require('services/accounts/accounts.service')
+  const mailerService = require('services/mailer/mailer.service')
 
   broker.createService(gatewayService)
   broker.createService(accountsService)
+  broker.createService(mailerService)
 
   return broker
 }

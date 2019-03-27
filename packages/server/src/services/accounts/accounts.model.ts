@@ -17,11 +17,9 @@ const accountsSchema = createSchema({
   avatar: { type: String, default: 'gravatar' },
 })
 
+const MONGO_URI = getServiceEnv('accounts', 'MONGO_URI') as string
+
 // tslint:disable-next-line:variable-name
-const Account = createModel<AccountDocument>(
-  'Account',
-  accountsSchema,
-  getServiceEnv('MONGO_URI', 'accounts'),
-)
+const Account = createModel<AccountDocument>('Account', accountsSchema, MONGO_URI)
 
 export default Account
