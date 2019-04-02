@@ -26,14 +26,13 @@ const builder = () => {
       locales[lng][ns] = {}
 
       try {
-        const transPath = path.resolve(lngDirPath, `${ns}.json`)
-        const translations = fs.existsSync(transPath)
-          ? JSON.parse(fs.readFileSync(transPath).toString())
-          : {}
-
         const missingTransPath = path.resolve(lngDirPath, `${ns}.missing.json`)
         const missingTranslations = fs.existsSync(missingTransPath)
           ? JSON.parse(fs.readFileSync(missingTransPath).toString())
+          : {}
+        const transPath = path.resolve(lngDirPath, `${ns}.json`)
+        const translations = fs.existsSync(transPath)
+          ? JSON.parse(fs.readFileSync(transPath).toString())
           : {}
 
         locales[lng][ns] = { ...translations, ...missingTranslations }

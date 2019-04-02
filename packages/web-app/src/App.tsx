@@ -2,11 +2,10 @@ import React from 'react'
 
 import MaterialUIProvider from 'providers/MaterialUIProvider'
 
-import logoSvg from './logo.svg'
-
-import { Button } from '@material-ui/core'
+import { Button, Typography } from '@material-ui/core'
+import DrawerNav from 'components/navigations/DrawerNav'
+import Dashboard from 'containers/Dashboard'
 import { useTranslation } from 'react-i18next'
-import './App.css'
 
 const App = () => {
   const { t, i18n } = useTranslation()
@@ -18,18 +17,8 @@ const App = () => {
   }
 
   return (
-    <MaterialUIProvider>
-      <div className="App">
-        <header className="App-header">
-          <img src={logoSvg} className="App-logo" alt="logo" />
-          <p>
-            {t('hello')} {t('welcome')}
-          </p>
-          <Button variant="contained" color="primary" onClick={changeLanguage}>
-            Change Language
-          </Button>
-        </header>
-      </div>
+    <MaterialUIProvider type="light">
+      <Dashboard />
     </MaterialUIProvider>
   )
 }

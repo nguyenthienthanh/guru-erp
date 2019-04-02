@@ -12,7 +12,7 @@ i18next
   .init({
     resources: locales,
     lng: 'en',
-    // fallbackLng: 'vi',
+    fallbackLng: 'en',
     defaultNS: 'main',
 
     saveMissing: true, // send not translated keys to endpoint

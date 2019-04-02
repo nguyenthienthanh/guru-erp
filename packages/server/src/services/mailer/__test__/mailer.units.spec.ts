@@ -36,5 +36,5 @@ describe('mailer service', () => {
         .toString()
         .startsWith('https://ethereal.email/message/'),
     ).toBe(true)
-  }, 15000)
+  })
 })

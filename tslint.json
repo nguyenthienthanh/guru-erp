@@ -26,7 +26,8 @@
         "reactDom": "ReactDOM",
         "graphqlTag": "gql",
         "moleculerDbAdapterMongoose": "MongooseAdapter",
-        "mongodbMemoryServer": "MongoMemoryServer"
+        "mongodbMemoryServer": "MongoMemoryServer",
+        "classnames": "classNames"
       }
     ],
     "align": {

@@ -1,0 +1,10 @@
+{
+  "analytics": "analytics",
+  "orders": "orders",
+  "pos": "pos",
+  "delivery": "delivery",
+  "payment": "payment",
+  "promotions": "promotions",
+  "customers": "customers",
+  "more_apps": "more apps"
+}

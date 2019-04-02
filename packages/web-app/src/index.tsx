@@ -6,6 +6,7 @@ import * as serviceWorker from './serviceWorker'
 import './index.css'
 
 import 'helpers/i18next'
+import 'typeface-roboto'
 
 import App from './App'
 
