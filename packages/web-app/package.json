@@ -12,7 +12,7 @@
   "dependencies": {
     "@material-ui/core": "4.0.0-alpha.5",
     "@material-ui/styles": "4.0.0-alpha.5",
-    "i18next": "15.0.7",
+    "i18next": "15.0.8",
     "i18next-xhr-backend": "2.0.1",
     "jest": "23.6.0",
     "jest-dom": "3.1.3",
