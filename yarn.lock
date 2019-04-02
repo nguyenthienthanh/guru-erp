@@ -2077,7 +2077,7 @@
     recompose "0.28.0 - 0.30.0"
     warning "^4.0.1"
 
-"@material-ui/lab@^4.0.0-alpha.4":
+"@material-ui/lab@4.0.0-alpha.6":
   version "4.0.0-alpha.6"
   resolved "https://registry.yarnpkg.com/@material-ui/lab/-/lab-4.0.0-alpha.6.tgz#06263a88b27ae58e9150a2efd99fefb34037e7f0"
   integrity sha512-mnnJXG7ofnEzUeIvIi2FdycFT5aN9L/zw2rAXSWnD2OnKm5EZpm3s6eiSDXLIg7Ulh+rU0yHmlVI4OVHHjPLgw==
@@ -2381,7 +2381,7 @@
     react-syntax-highlighter "^8.0.1"
     regenerator-runtime "^0.12.1"
 
-"@storybook/addon-viewport@^5.0.5":
+"@storybook/addon-viewport@5.0.6":
   version "5.0.6"
   resolved "https://registry.yarnpkg.com/@storybook/addon-viewport/-/addon-viewport-5.0.6.tgz#12a7430114a4bcfd9c35a44f42688be3b46a0910"
   integrity sha512-GCxTSAvIR49753snvcSI0qXQ2JJrVBlfdRpQ+F5AsG2qhw8LJAkxX6lGKsX8VeieiaMUnowQTaVx/oSGIcchhQ==
@@ -3073,7 +3073,7 @@
     csstype "^2.0.0"
     indefinite-observable "^1.0.1"
 
-"@types/lodash@4.14.123", "@types/lodash@^4.14.123":
+"@types/lodash@4.14.123":
   version "4.14.123"
   resolved "https://registry.yarnpkg.com/@types/lodash/-/lodash-4.14.123.tgz#39be5d211478c8dd3bdae98ee75bb7efe4abfe4d"
   integrity sha512-pQvPkc4Nltyx7G1Ww45OjVqUsJP4UsZm+GWJpigXgkikZqJgRm4c48g027o6tdgubWHwFRF15iFd+Y4Pmqv6+Q==
@@ -3237,7 +3237,7 @@
     "@types/unist" "*"
     "@types/vfile-message" "*"
 
-"@types/voca@^1.4.0":
+"@types/voca@1.4.0":
   version "1.4.0"
   resolved "https://registry.yarnpkg.com/@types/voca/-/voca-1.4.0.tgz#59d93132e411f13fbaacb166a2047464c463535a"
   integrity sha512-LdffYbNO8Mg06oPouDq13XwarZbYEvLHMCeV04B/LYl2o6miyg4qBa3YduIZcNhK8/r3Soq0a1tCDeprkBXTIQ==
@@ -12066,7 +12066,7 @@ md5.js@^1.3.4:
     inherits "^2.0.1"
     safe-buffer "^5.1.2"
 
-mdi-material-ui@^5.10.0:
+mdi-material-ui@5.10.0:
   version "5.10.0"
   resolved "https://registry.yarnpkg.com/mdi-material-ui/-/mdi-material-ui-5.10.0.tgz#e7cebff71fd5e203defe909356da1689e51e9602"
   integrity sha512-vxInUhZBere/acbErn6MMNn2szHmexEgDuBJ3XzgG2GffIPI6s8e1z4iOnU+19cHUC6oeuayUNI82duvoh591A==
@@ -15119,7 +15119,7 @@ react-resize-detector@^4.0.5:
     raf-schd "^4.0.0"
     resize-observer-polyfill "^1.5.1"
 
-react-router-dom@^5.0.0:
+react-router-dom@5.0.0:
   version "5.0.0"
   resolved "https://registry.yarnpkg.com/react-router-dom/-/react-router-dom-5.0.0.tgz#542a9b86af269a37f0b87218c4c25ea8dcf0c073"
   integrity sha512-wSpja5g9kh5dIteZT3tUoggjnsa+TPFHSMrpHXMpFsaHhQkm/JNVGh2jiF9Dkh4+duj4MKCkwO6H08u6inZYgQ==
@@ -17664,7 +17664,7 @@ typedarray@^0.0.6:
   resolved "https://registry.yarnpkg.com/typedarray/-/typedarray-0.0.6.tgz#867ac74e3864187b1d3d47d996a78ec5c8830777"
   integrity sha1-hnrHTjhkGHsdPUfZlqeOxciDB3c=
 
-typeface-roboto@^0.0.54:
+typeface-roboto@0.0.54:
   version "0.0.54"
   resolved "https://registry.yarnpkg.com/typeface-roboto/-/typeface-roboto-0.0.54.tgz#8f02c9a18d1cfa7f49381a6ff0d21ff061f38ad2"
   integrity sha512-sOFA1FXgP0gOgBYlS6irwq6hHYA370KE3dPlgYEJHL3PJd5X8gQE0RmL79ONif6fL5JZuGDj+rtOrFeOqz5IZQ==
@@ -17986,7 +17986,7 @@ vm-browserify@0.0.4:
   dependencies:
     indexof "0.0.1"
 
-voca@^1.4.0:
+voca@1.4.0:
   version "1.4.0"
   resolved "https://registry.yarnpkg.com/voca/-/voca-1.4.0.tgz#e15ac58b38290b72acc0c330366b6cc7984924d7"
   integrity sha512-8Xz4H3vhYRGbFupLtl6dHwMx0ojUcjt0HYkqZ9oBCfipd/5mD7Md58m2/dq7uPuZU/0T3Gb1m66KS9jn+I+14Q==
