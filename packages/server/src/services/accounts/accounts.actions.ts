@@ -7,6 +7,12 @@ import accountsEvents from './accounts.events'
 // tslint:disable-next-line:import-name
 import Account from './accounts.model'
 
+/**
+ * Creates a new account with email and password
+ * @param {string} email
+ * @param {string} password
+ * @returns The created `account` document
+ */
 const createAccount = {
   graphql: {
     mutation: `createAccount(email: String!, password: String!): Account`,
@@ -63,6 +69,11 @@ const createAccount = {
   },
 }
 
+/**
+ * Generates a JWT with the given email and password
+ * @param {string} email
+ * @param {string} password
+ */
 const signIn = {
   graphql: {
     mutation: `signIn(email: String!, password: String!): String`,
@@ -104,6 +115,9 @@ const signIn = {
   },
 }
 
+/**
+ * @returns An `ctx.meta.account` value
+ */
 const authenticate = {
   graphql: {
     query: `authenticate: Account`,

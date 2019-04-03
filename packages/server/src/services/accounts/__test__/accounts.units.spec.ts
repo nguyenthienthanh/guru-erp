@@ -3,8 +3,6 @@ import { verify } from 'jsonwebtoken'
 import MongoMemoryServer from 'mongodb-memory-server'
 import chance from 'utils/chance'
 import { createTestBroker, loadAllServices, mockMongoServer, randEnvPort } from 'utils/testing'
-// tslint:disable-next-line:import-name
-import Account from '../accounts.model'
 
 const genAccount = () => ({
   email: chance.email(),
@@ -226,6 +224,26 @@ describe('accounts service', () => {
       expect(await verify(jwt, process.env.JWT_SECRET)).toMatchObject({
         email: accountParams.email,
       })
+    })
+  })
+
+  describe('test accounts.authenticate action', () => {
+    it('should be falsy (undefined or null) if the context.account is not set', async () => {
+      const account = await broker.call('accounts.authenticate')
+      expect(account).toBeFalsy()
+    })
+    it('should return exactly context.meta.account value', async () => {
+      const accountParams = genAccount()
+      const account = await broker.call(
+        'accounts.authenticate',
+        {},
+        {
+          meta: {
+            account: accountParams,
+          },
+        },
+      )
+      expect(account).toMatchObject(accountParams)
     })
   })
 })
