@@ -27,7 +27,7 @@
     "react-scripts": "2.1.8",
     "react-testing-library": "6.0.4",
     "typeface-roboto": "0.0.54",
-    "typescript": "3.4.1",
+    "typescript": "3.4.2",
     "voca": "1.4.0"
   },
   "devDependencies": {
