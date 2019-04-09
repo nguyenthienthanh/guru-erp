@@ -12809,10 +12809,10 @@ nanomatch@^1.2.9:
     snapdragon "^0.8.1"
     to-regex "^3.0.1"
 
-nats@1.2.6:
-  version "1.2.6"
-  resolved "https://registry.yarnpkg.com/nats/-/nats-1.2.6.tgz#5f214e2802cd1411280acfdc6542e220b7e662cf"
-  integrity sha512-0HRboHf2imRMzqPzrJCkWMjC9tHPWeQzDxsKj06pdA9+eEjXJtxLt6rSngyQ+YWrb9562JX9U6RU3IRXs2MmzA==
+nats@1.2.8:
+  version "1.2.8"
+  resolved "https://registry.yarnpkg.com/nats/-/nats-1.2.8.tgz#35f0dd333184e4608cafe655bc52a1c4c7194ac0"
+  integrity sha512-9ER9vPw1RML9zVU1CusVbo/HF4GZTUNbAlNzUnS9p1f5l2QnsfdyN4OmdjHebdrqXDob0dA0E5EBeJjp4gCNoQ==
   dependencies:
     nuid "^1.0.0"
     ts-nkeys "^1.0.8"
