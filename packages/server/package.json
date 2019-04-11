@@ -26,7 +26,7 @@
     "@types/jest": "24.0.11",
     "@types/jsonwebtoken": "8.3.2",
     "@types/lodash": "4.14.123",
-    "@types/mongoose": "5.3.26",
+    "@types/mongoose": "5.3.25",
     "@types/node": "10.14.4",
     "@types/nodemailer": "4.6.7",
     "@types/yup": "0.26.12",
@@ -59,7 +59,7 @@
     "moleculer-web": "0.9.0-beta2",
     "mongoose": "5.5.0",
     "mongoose-delete": "0.5.0",
-    "nats": "1.2.8",
+    "nats": "1.2.10",
     "nodemailer": "6.1.0",
     "tsconfig-paths": "3.8.0",
     "yup": "0.27.0"

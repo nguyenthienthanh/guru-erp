@@ -3189,10 +3189,10 @@
     "@types/bson" "*"
     "@types/node" "*"
 
-"@types/mongoose@5.3.26":
-  version "5.3.26"
-  resolved "https://registry.yarnpkg.com/@types/mongoose/-/mongoose-5.3.26.tgz#a979014c7fc9395e484695d4cc5647e7686251db"
-  integrity sha512-7NPdpUGU/1ZztTICcP3GxwWBAHTDyOLW0XJxrxlTl5i7R7XbT2Ucq33JussSLkWHKjbxpAmJnDwlYKcjwG7agg==
+"@types/mongoose@5.3.25":
+  version "5.3.25"
+  resolved "https://registry.yarnpkg.com/@types/mongoose/-/mongoose-5.3.25.tgz#bb8cca7a8393277d787ddf35f39e132c80474dc9"
+  integrity sha512-HhxLHxUD56N3LjpbpQ6SmaRFDx33RvxRNJwD303LN+ebmCXbZwqpR0pERE2SSjmhu+UvPiJDTH5Bm+YC1qlyNw==
   dependencies:
     "@types/mongodb" "*"
     "@types/node" "*"
@@ -3207,10 +3207,10 @@
   resolved "https://registry.yarnpkg.com/@types/node/-/node-10.14.4.tgz#1c586b991457cbb58fef51bc4e0cfcfa347714b5"
   integrity sha512-DT25xX/YgyPKiHFOpNuANIQIVvYEwCWXgK2jYYwqgaMrYE6+tq+DtmMwlD3drl6DJbUwtlIDnn0d7tIn/EbXBg==
 
-"@types/node@11.13.2":
-  version "11.13.2"
-  resolved "https://registry.yarnpkg.com/@types/node/-/node-11.13.2.tgz#dc85dde46aa8740bb4aed54b8104250f8f849503"
-  integrity sha512-HOtU5KqROKT7qX/itKHuTtt5fV0iXbheQvrgbLNXFJQBY/eh+VS5vmmTAVlo3qIGMsypm0G4N1t2AXjy1ZicaQ==
+"@types/node@11.13.4":
+  version "11.13.4"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-11.13.4.tgz#f83ec3c3e05b174b7241fadeb6688267fe5b22ca"
+  integrity sha512-+rabAZZ3Yn7tF/XPGHupKIL5EcAbrLxnTr/hgQICxbeuAfWtT0UZSfULE+ndusckBItcv4o6ZeOJplQikVcLvQ==
 
 "@types/nodemailer@4.6.7":
   version "4.6.7"
@@ -12818,10 +12818,10 @@ nanomatch@^1.2.9:
     snapdragon "^0.8.1"
     to-regex "^3.0.1"
 
-nats@1.2.8:
-  version "1.2.8"
-  resolved "https://registry.yarnpkg.com/nats/-/nats-1.2.8.tgz#35f0dd333184e4608cafe655bc52a1c4c7194ac0"
-  integrity sha512-9ER9vPw1RML9zVU1CusVbo/HF4GZTUNbAlNzUnS9p1f5l2QnsfdyN4OmdjHebdrqXDob0dA0E5EBeJjp4gCNoQ==
+nats@1.2.10:
+  version "1.2.10"
+  resolved "https://registry.yarnpkg.com/nats/-/nats-1.2.10.tgz#3f673e80d3a513f7802b0a5c1f227127a3d1d780"
+  integrity sha512-0FQMINZbyRkFMRbrpc6+IkKMQ+Zi2Ibr4YPhoEBlbP0Gw3ta23e/GB+LvXNqnV3htOPJNJ54+ToMI43BCYATGQ==
   dependencies:
     nuid "^1.0.0"
     ts-nkeys "^1.0.8"
