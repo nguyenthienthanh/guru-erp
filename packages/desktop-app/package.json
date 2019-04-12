@@ -18,7 +18,7 @@
     "start": "yarn build && concurrently \"yarn build:watch\" \"cross-env BROWSER=none yarn workspace @guru-erp/web start\" \"wait-on http://localhost:3000 && electron dist/main.js\""
   },
   "dependencies": {
-    "electron-is-dev": "1.0.1"
+    "electron-is-dev": "1.1.0"
   },
   "devDependencies": {
     "@types/electron-devtools-installer": "2.2.0",
