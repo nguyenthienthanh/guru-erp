@@ -23,7 +23,7 @@
     "@types/express-winston": "3.0.1",
     "@types/i18next-node-fs-backend": "0.0.30",
     "@types/lodash": "4.14.123",
-    "@types/node": "11.13.4",
+    "@types/node": "11.13.5",
     "ts-node": "8.1.0",
     "ts-node-dev": "1.0.0-pre.32",
     "typescript": "3.4.3"
