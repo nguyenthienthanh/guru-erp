@@ -40,7 +40,7 @@ export const randEnvPort = async () => {
 }
 
 export const mockMongoServer = async () => {
-  const mongoServer = new MongoMemoryServer()
+  const mongoServer = new (MongoMemoryServer as any)()
   process.env.MONGO_URI = await mongoServer.getConnectionString()
   return mongoServer
 }

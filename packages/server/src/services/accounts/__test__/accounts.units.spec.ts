@@ -9,7 +9,7 @@ jasmine.DEFAULT_TIMEOUT_INTERVAL = 600000
 
 describe('accounts service', () => {
   const broker = createTestBroker()
-  let mongoServer: MongoMemoryServer
+  let mongoServer: any
 
   beforeAll(async () => {
     mongoServer = await mockMongoServer()

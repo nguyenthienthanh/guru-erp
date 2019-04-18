@@ -15,7 +15,7 @@ jasmine.DEFAULT_TIMEOUT_INTERVAL = 600000
 
 describe('Test members service', () => {
   let broker: ServiceBroker
-  let mongoServer: MongoMemoryServer
+  let mongoServer: any
   let account: IAccount
   let org: IOrg
   let callOpts: CallingOptions

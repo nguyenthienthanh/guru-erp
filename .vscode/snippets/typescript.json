@@ -118,7 +118,7 @@
       "",
       "describe('Test $1 service', () => {",
       "  let broker: ServiceBroker",
-      "  let mongod: MongoMemoryServer",
+      "  let mongod: any",
       "  let gqlClient: TestGraphQLClient",
       "",
       "  beforeAll(async () => {",

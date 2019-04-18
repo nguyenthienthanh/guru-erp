@@ -21,7 +21,7 @@ jasmine.DEFAULT_TIMEOUT_INTERVAL = 600000
 
 describe('Integration test orgs service', () => {
   let broker: ServiceBroker
-  let mongod: MongoMemoryServer
+  let mongod: any
   let gqlClient: TestGraphQLClient
 
   beforeAll(async () => {

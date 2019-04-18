@@ -14,7 +14,7 @@ const findOrgByIdOrNamespaceAction = 'orgs.findOrgByIdOrNamespace'
 
 describe('Test orgs service', () => {
   let broker: ServiceBroker
-  let mongoServer: MongoMemoryServer
+  let mongoServer: any
 
   beforeAll(async () => {
     mongoServer = await mockMongoServer()

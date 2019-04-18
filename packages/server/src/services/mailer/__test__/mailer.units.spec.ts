@@ -10,7 +10,7 @@ jasmine.DEFAULT_TIMEOUT_INTERVAL = 600000
 
 describe('mailer service', () => {
   let broker: ServiceBroker
-  let mongoServer: MongoMemoryServer
+  let mongoServer: any
 
   beforeAll(async () => {
     await randEnvPort()
