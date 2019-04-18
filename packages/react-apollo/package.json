@@ -44,7 +44,7 @@
   "devDependencies": {
     "@types/react": "16.8.13",
     "rimraf": "2.6.3",
-    "tslint": "5.15.0",
+    "tslint": "5.16.0",
     "typescript": "3.4.3"
   }
 }
