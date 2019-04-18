@@ -7,7 +7,7 @@
     "dev": "NODE_ENV=development ts-node-dev --respawn --transpileOnly -r tsconfig-paths/register ./node_modules/.bin/moleculer-runner --repl --config src/moleculer.config.ts src/services/**/*.service.ts",
     "cli": "moleculer connect NATS",
     "start": "yarn dev",
-    "start:prod": "NODE_ENV=production moleculer-runner services",
+    "start:prod": "NODE_PATH=dist NODE_ENV=production moleculer-runner --config dist/moleculer.config.js dist/services/**/*.service.js",
     "ci": "NODE_ENV=test jest --watch",
     "test": "NODE_ENV=test jest --forceExit --detectOpenHandles --coverage",
     "lint": "tslint -p tsconfig.json"
