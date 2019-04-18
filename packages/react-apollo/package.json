@@ -1,0 +1,50 @@
+{
+  "name": "@guru-erp/react-apollo",
+  "version": "0.0.0",
+  "description": "Shared React Apollo utils, hooks & components for React web app and React Native mobile app",
+  "keywords": [
+    "graphql",
+    "apollo",
+    "react",
+    "react",
+    "native"
+  ],
+  "author": "Dương Đỗ <dustin.do95@gmail.com>",
+  "homepage": "https://github.com/targeek/guru-erp#readme",
+  "license": "ISC",
+  "main": "lib/index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/targeek/guru-erp.git"
+  },
+  "scripts": {
+    "test": "yarn build",
+    "clean": "rimraf lib",
+    "build": "yarn clean && tsc",
+    "start": "tsc --watch"
+  },
+  "bugs": {
+    "url": "https://github.com/targeek/guru-erp/issues"
+  },
+  "dependencies": {
+    "apollo-cache-inmemory": "1.5.1",
+    "apollo-client": "2.5.1",
+    "apollo-link": "1.2.11",
+    "apollo-link-error": "1.1.10",
+    "apollo-link-http": "1.5.14",
+    "graphql": "14.2.1",
+    "graphql-tag": "^2.10.1",
+    "react-apollo": "2.5.4",
+    "react-apollo-hooks": "0.4.5",
+    "universal-cookie": "^3.1.0"
+  },
+  "peerDependencies": {
+    "react": "16.8.6"
+  },
+  "devDependencies": {
+    "@types/react": "16.8.13",
+    "rimraf": "2.6.3",
+    "tslint": "5.15.0",
+    "typescript": "3.4.3"
+  }
+}

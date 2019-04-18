@@ -1,0 +1,37 @@
+{
+  "name": "@guru-erp/illustrations",
+  "version": "0.0.0",
+  "description": "Illustrations for Guru ERP project",
+  "author": "Dương Đỗ <dustin.do95@gmail.com>",
+  "homepage": "https://github.com/targeek/guru-erp#readme",
+  "license": "ISC",
+  "main": "lib/index.js",
+  "directories": {
+    "lib": "lib",
+    "test": "__tests__"
+  },
+  "files": [
+    "lib"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/targeek/guru-erp.git"
+  },
+  "scripts": {
+    "test": "yarn build",
+    "clean": "rimraf lib",
+    "build": "tsc",
+    "start": "tsc --watch"
+  },
+  "bugs": {
+    "url": "https://github.com/targeek/guru-erp/issues"
+  },
+  "devDependencies": {
+    "@types/react": "^16.8.13",
+    "rimraf": "^2.6.3",
+    "typescript": "^3.4.3"
+  },
+  "peerDependencies": {
+    "react": "^16.8.6"
+  }
+}

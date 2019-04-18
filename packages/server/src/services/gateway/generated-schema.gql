@@ -10,11 +10,40 @@ scalar Empty
 
 scalar JSON
 
+type Member {
+  id: ID!
+  username: String
+  account: Account
+  org: Org
+  membership: String
+  roles: [String]
+  lastActivity: Date
+  availability: String
+}
+
 type Mutation {
   createAccount(email: String!, password: String!): Account
   signIn(email: String!, password: String!): String
+  createOrg(name: String, namespace: String): Org
+}
+
+type Org {
+  id: ID!
+  name: String
+  namespace: String
+  logo: String
+
+  """objectId of the account which created the org"""
+  createdByAccountId: String
+
+  """resolved account by createdByAccountId"""
+  createdByAccount: Account
+
+  """resolved member by createdByAccountId and id"""
+  createdByMember: Member
 }
 
 type Query {
   authenticate: Account
+  findOrgByIdOrNamespace(id: ID, namespace: String): Org
 }

@@ -11,6 +11,7 @@ const Yup = __importStar(require("yup"));
 const common_1 = require("./common");
 exports.PASSWORD_MIN_LENGTH = 6;
 exports.PASSWORD_MAX_LENGTH = 128;
+exports.accountId = common_1.objectId;
 exports.accountEmail = common_1.email.email();
 exports.accountPassword = Yup.string()
     .min(exports.PASSWORD_MIN_LENGTH)
@@ -22,5 +23,8 @@ exports.createAccountParams = Yup.object().shape({
 exports.signInParams = Yup.object().shape({
     email: exports.accountEmail.required(),
     password: exports.accountPassword.required(),
+});
+exports.findAccountByIdParams = Yup.object().shape({
+    id: common_1.objectId.required(),
 });
 //# sourceMappingURL=accounts.js.map

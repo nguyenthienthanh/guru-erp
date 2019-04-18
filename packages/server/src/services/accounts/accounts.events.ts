@@ -1,6 +1,9 @@
 const accountsEvents = {
-  CREATE_SUCCEEDED: 'accounts:account_creat_succeeded',
-  CREATE_FAILED: 'accounts:account_create_failed',
+  CREATE_SUCCEEDED: 'accounts:create_succeeded',
+  CREATE_FAILED: 'accounts:create_failed',
+
+  SIGN_IN_SUCCEEDED: 'accounts:signIn_succeeded',
+  SIGN_IN_FAILED: 'accounts:signIn_failed',
 }
 
 export default accountsEvents

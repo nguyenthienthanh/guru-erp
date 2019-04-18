@@ -9,4 +9,5 @@ var __importStar = (this && this.__importStar) || function (mod) {
 Object.defineProperty(exports, "__esModule", { value: true });
 const Yup = __importStar(require("yup"));
 exports.email = Yup.string().email();
+exports.objectId = Yup.string().matches(/^[0-9a-fA-F]{24}$/);
 //# sourceMappingURL=common.js.map

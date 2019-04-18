@@ -6,6 +6,8 @@ import chance from 'utils/chance'
 import { createTestBroker, loadAllServices, mockMongoServer, randEnvPort } from 'utils/testing'
 import mailerService = require('../mailer.service')
 
+jasmine.DEFAULT_TIMEOUT_INTERVAL = 600000
+
 describe('mailer service', () => {
   let broker: ServiceBroker
   let mongoServer: MongoMemoryServer

@@ -32,9 +32,10 @@
     "@types/yup": "0.26.12",
     "dotenv": "7.0.0",
     "get-port": "5.0.0",
-    "graphql-request": "1.8.2",
+    "graphql-request": "^1.8.2",
     "jest": "24.7.1",
     "jest-cli": "24.7.1",
+    "mockingoose": "^2.13.0",
     "moleculer-repl": "0.5.7",
     "mongodb-memory-server": "4.2.2",
     "ts-jest": "24.0.2",
@@ -44,6 +45,7 @@
     "typescript": "3.4.3"
   },
   "dependencies": {
+    "accesscontrol": "^2.2.1",
     "axios": "0.18.0",
     "bcrypt": "3.0.6",
     "chalk": "2.4.2",

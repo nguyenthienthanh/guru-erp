@@ -26,3 +26,8 @@
   src: local('Product Sans'),
     url('/fonts/product-sans/Product Sans Bold Italic.ttf') format('truetype');
 }
+
+a {
+  color: inherit;
+  text-decoration: none;
+}

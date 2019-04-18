@@ -12,22 +12,16 @@ import { ComponentsProps } from '@material-ui/core/styles/props'
 export const headingFontFamily =
   '"Product Sans", "SVN-Product Sans", "Roboto", "Helvetica", "Arial", sans-serif'
 
-const MaterialUIProvider = ({
-  children,
-  type,
-}: {
-  children: ReactNode
-  type?: 'light' | 'dark'
-}) => {
+export const createTheme = (type?: 'light' | 'dark') => {
   let theme = createMuiTheme({
     palette: {
       type,
       secondary,
       primary: {
         ...primary,
-        light: '#63ccff',
-        main: '#009be5',
-        dark: '#006db3',
+        light: '#3554A1',
+        main: '#111E93',
+        dark: '#241F64',
       },
     },
     shape: {
@@ -94,6 +88,18 @@ const MaterialUIProvider = ({
       },
     },
   }
+
+  return theme
+}
+
+const MaterialUIProvider = ({
+  children,
+  type,
+}: {
+  children: ReactNode
+  type?: 'light' | 'dark'
+}) => {
+  const theme = createTheme(type)
 
   return (
     <ThemeProvider theme={theme}>

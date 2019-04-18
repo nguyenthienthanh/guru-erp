@@ -38,15 +38,21 @@ export const createConnection = (
     ...options,
   })
   /* istanbul ignore next line */
-  connection.on('connect', () => console.info(`✅  MongoDB connected: ${chalk.green(uri)}`))
+  connection.on('connect', () => {
+    if (process.env.NODE_ENV !== 'test') console.info(`✅  MongoDB connected: ${chalk.green(uri)}`)
+  })
   /* istanbul ignore next line */
   connection.on('error', (error) => {
-    console.error(`❌ Couldn't connect to MongoDB at ${chalk.redBright(uri)}`, error)
+    if (process.env.NODE_ENV !== 'test') {
+      console.error(`❌ Couldn't connect to MongoDB at ${chalk.redBright(uri)}`, error)
+    }
     throw error
   })
   /* istanbul ignore next line */
   connection.on('disconnected', () => {
-    console.warn(`❌ Disconnected from MongoDB at ${chalk.redBright(uri)}`)
+    if (process.env.NODE_ENV !== 'test') {
+      console.warn(`❌ Disconnected from MongoDB at ${chalk.redBright(uri)}`)
+    }
   })
 
   return connection
