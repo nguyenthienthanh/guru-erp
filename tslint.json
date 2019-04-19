@@ -27,7 +27,8 @@
         "graphqlTag": "gql",
         "moleculerDbAdapterMongoose": "MongooseAdapter",
         "mongodbMemoryServer": "MongoMemoryServer",
-        "classnames": "classNames"
+        "classnames": "classNames",
+        "useReactRouter": "useRouter"
       }
     ],
     "align": {

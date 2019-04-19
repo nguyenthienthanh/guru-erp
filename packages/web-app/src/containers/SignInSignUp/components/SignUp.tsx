@@ -8,9 +8,9 @@ import { Field, FieldProps, Formik } from 'formik'
 import { useTranslation } from 'react-i18next'
 import { Link } from 'react-router-dom'
 import { SIGN_IN_PATH } from 'routes'
-import useReactRouter from 'use-react-router'
+import useRouter from 'use-react-router'
 import { getFieldError, isFieldError, parseGraphQLErrors } from 'utils/formik'
-import Layout from './Layout'
+import SignInSignUpLayout from './SignInSignUpLayout'
 
 const initialValues = {
   email: '',
@@ -23,10 +23,10 @@ type SignUpValues = typeof initialValues
 const SignUp = () => {
   const { t } = useTranslation()
   const handleCreateAccount = useCreateAccountMutation()
-  const { history } = useReactRouter()
+  const { history } = useRouter()
 
   return (
-    <Layout
+    <SignInSignUpLayout
       formTitle="Sign up"
       form={({ TextField, SubmitButton, setLoading }) => (
         <Formik

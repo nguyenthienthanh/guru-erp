@@ -9,12 +9,12 @@ import { Field, FieldProps, Formik } from 'formik'
 import { useCookies } from 'react-cookie'
 import { useTranslation } from 'react-i18next'
 import { Link } from 'react-router-dom'
-import useReactRouter from 'use-react-router'
+import useRouter from 'use-react-router'
 import { getFieldError, isFieldError, parseGraphQLErrors } from 'utils/formik'
 
 import { ACCESS_TOKEN_COOKIE } from 'constants/variables'
 import { WORK_PATH } from 'routes'
-import Layout from './Layout'
+import SignInSignUpLayout from './SignInSignUpLayout'
 
 type SignInValues = typeof initialValues
 
@@ -27,7 +27,7 @@ const SignIn = () => {
   const { t } = useTranslation()
   const handleSignIn = useSignInMutation()
   const [cookies, setCookie, removeCookie] = useCookies()
-  const { history, location } = useReactRouter()
+  const { history, location } = useRouter()
 
   const initialEmail = get(location.state, 'email')
 
@@ -38,7 +38,7 @@ const SignIn = () => {
   }, [])
 
   return (
-    <Layout
+    <SignInSignUpLayout
       image={HappyFeeling}
       form={({ TextField, SubmitButton, loading, setLoading }) => (
         <Formik

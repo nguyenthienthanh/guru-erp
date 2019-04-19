@@ -25,6 +25,10 @@ const useStyles = makeStyles(({ palette, spacing }: Theme) => ({
     overflow: 'hidden',
     padding: spacing(7, 5),
     background: `linear-gradient(45deg, ${palette.primary.dark}, ${palette.primary.light})`,
+
+    '& a': {
+      color: palette.text.primary,
+    },
   },
 }))
 

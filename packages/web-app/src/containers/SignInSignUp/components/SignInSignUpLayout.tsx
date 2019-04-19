@@ -14,9 +14,10 @@ import {
 import { ButtonProps } from '@material-ui/core/Button'
 import { OutlinedTextFieldProps } from '@material-ui/core/TextField'
 import GradientPaper from 'components/shared/GradientPaper'
+import Logo from 'components/shared/Logo'
 import Spinner from 'components/shared/Spinner'
 
-interface LayoutProps {
+interface SignInSignUpLayoutProps {
   direction?: 'row' | 'row-reverse'
   image: ComponentType<SvgProps>
   form: ({
@@ -32,7 +33,7 @@ interface LayoutProps {
   bottomText: JSX.Element
 }
 
-const Layout = (props: LayoutProps) => {
+const SignInSignUpLayout = (props: SignInSignUpLayoutProps) => {
   const classes = useStyles(props)
   const [loading, setLoading] = React.useState(false)
 
@@ -42,6 +43,7 @@ const Layout = (props: LayoutProps) => {
     <Fade in>
       <Grid container spacing={2} direction={props.direction}>
         <Grid item md={6} sm={7}>
+          <Logo classes={{ root: classes.logo }} />
           <Typography variant="h3" color="primary" gutterBottom>
             Solution for your happy business
           </Typography>
@@ -68,7 +70,7 @@ const Layout = (props: LayoutProps) => {
                 Welcome to Guru ERP
               </Typography>
             </div>
-            <div className={classes.formWrapper}>
+            <form autoComplete="off" className={classes.formWrapper}>
               {props.form({
                 loading,
                 setLoading,
@@ -78,7 +80,6 @@ const Layout = (props: LayoutProps) => {
                 }: Partial<OutlinedTextFieldProps> & { onPressEnter?: any }) => (
                   <TextField
                     fullWidth
-                    autoComplete="off"
                     variant="outlined"
                     margin="normal"
                     InputProps={{ classes: { focused: classes.textFieldFocused } }}
@@ -103,7 +104,7 @@ const Layout = (props: LayoutProps) => {
                   />
                 ),
               })}
-            </div>
+            </form>
             <div className={classes.bottomTextWrapper}>{props.bottomText}</div>
           </GradientPaper>
         </Grid>
@@ -146,6 +147,9 @@ const useStyles = makeStyles(({ palette, spacing }: Theme) => ({
   submitButtonDisabled: {
     color: `${palette.text.secondary} !important`,
   },
+  logo: {
+    marginBottom: spacing(4),
+  },
 }))
 
-export default Layout
+export default SignInSignUpLayout
