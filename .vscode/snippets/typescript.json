@@ -1,0 +1,161 @@
+{
+  "Generate service actions": {
+    "prefix": "svactions",
+    "body": [
+      "import { Action } from 'local-types'",
+      "",
+      "const $1Actions = {}",
+      "",
+      "export default $1Actions"
+    ]
+  },
+
+  "Generate service definitions": {
+    "prefix": "svdef",
+    "body": [
+      "import { Document } from 'mongoose'",
+      "import { Service, Context } from 'moleculer'",
+      "",
+      "import { I$2 } from '@guru-erp/interfaces'",
+      "",
+      "import $1Methods from './$1.methods'",
+      "",
+      "export type $2Document = Document & I$2",
+      "export type $3Methods = typeof $1Methods",
+      "export type $3Service = Service & $3Methods",
+      "export type $3Context = Context & {",
+      "  service: $3Service",
+      "}"
+    ]
+  },
+
+  "Generate service methods": {
+    "prefix": "svmethods",
+    "body": ["const $1Methods = {}", "", "export default $1Methods"]
+  },
+
+  "Generate service events": {
+    "prefix": "svevents",
+    "body": ["const $1Events = {}", "", "export default $1Events"]
+  },
+
+  "Generate service gql": {
+    "prefix": "svgql",
+    "body": [
+      "import gql from 'graphql-tag'",
+      "",
+      "const $1Gql = gql`$2`",
+      "",
+      "export default $1Gql"
+    ]
+  },
+
+  "Generate service model": {
+    "prefix": "svmodel",
+    "body": [
+      "import { getServiceEnv } from 'utils'",
+      "import { createModel, createSchema } from 'utils/mongoose'",
+      "",
+      "import { $1Document } from './$2'",
+      "",
+      "const $2Schema = createSchema({$3})",
+      "",
+      "const MONGO_URI = getServiceEnv('$2', 'MONGO_URI') as string",
+      "",
+      "// tslint:disable-next-line:variable-name",
+      "const $1 = createModel<$1Document>('$1', $2Schema, MONGO_URI)",
+      "",
+      "export default $1",
+      ""
+    ]
+  },
+
+  "Generate service schema": {
+    "prefix": "svschema",
+    "body": [
+      "import { ServiceSchema } from 'moleculer'",
+      "import { gqlToString } from 'utils/graphql'",
+      "",
+      "import accesscontrolMixin from 'mixins/accesscontrol.mixin'",
+      "",
+      "import $1Actions from './$1.actions'",
+      "import $1Gql from './$1.gql'",
+      "import $1Methods from './$1.methods'",
+      "",
+      "const SERVICE_NAME = '$1'",
+      "",
+      "const $1Service: ServiceSchema = {",
+      "  name: SERVICE_NAME,",
+      "  mixins: [accesscontrolMixin],",
+      "  settings: {",
+      "    graphql: {",
+      "      type: gqlToString($1Gql),",
+      "    },",
+      "  },",
+      "  actions: $1Actions as any,",
+      "  methods: $1Methods,",
+      "}",
+      "",
+      "export = $1Service"
+    ]
+  },
+
+  "Generate service unit test specs": {
+    "prefix": "svspecs",
+    "body": [
+      "import { ServiceBroker } from 'moleculer'",
+      "import MongoMemoryServer from 'mongodb-memory-server'",
+      "import {",
+      "  createGqlClient,",
+      "  createTestBroker,",
+      "  loadAllServices,",
+      "  mockMongoServer,",
+      "  randEnvPort,",
+      "  TestGraphQLClient,",
+      "} from 'utils/testing'",
+      "",
+      "jasmine.DEFAULT_TIMEOUT_INTERVAL = 600000",
+      "",
+      "describe('Test $1 service', () => {",
+      "  let broker: ServiceBroker",
+      "  let mongod: any",
+      "  let gqlClient: TestGraphQLClient",
+      "",
+      "  beforeAll(async () => {",
+      "    mongod = await mockMongoServer()",
+      "    await randEnvPort()",
+      "",
+      "    broker = await createTestBroker()",
+      "    await loadAllServices(broker)",
+      "    await broker.start()",
+      "",
+      "    gqlClient = createGqlClient()",
+      "  })",
+      "",
+      "  afterAll(async () => {",
+      "    await broker.stop()",
+      "    await mongod.stop()",
+      "  })",
+      "})"
+    ]
+  },
+
+  "Generate React Apollo hook": {
+    "prefix": "gqlhook",
+    "body": [
+      "import gql from 'graphql-tag'",
+      "import { MutationHookOptions, useMutation } from 'react-apollo-hooks'",
+      "",
+      "const $1 = gql`",
+      "$3",
+      "`",
+      "",
+      "interface Data {$4}",
+      "",
+      "interface Variables {$5}",
+      "",
+      "export const use$2 = (opts?: MutationHookOptions<Data, Variables>) =>",
+      "  useMutation<Data, Variables>($1, opts)"
+    ]
+  }
+}

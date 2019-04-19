@@ -5,3 +5,5 @@ export const MINI_DRAWER_NAV_WIDTH = 64
 
 export const RIGHT_DRAWER_WIDTH = 380
 export const RIGHT_DRAWER_APPS_WIDTH = 52
+
+export const ACCESS_TOKEN_COOKIE = 'guru_token'

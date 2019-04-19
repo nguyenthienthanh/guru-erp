@@ -2,6 +2,8 @@ import { ConnectionOptions } from 'mongoose'
 import { createConnection } from 'utils/mongoose'
 import { mockMongoServer } from 'utils/testing'
 
+jasmine.DEFAULT_TIMEOUT_INTERVAL = 600000
+
 const DEFAULT_OPTS: ConnectionOptions = {
   reconnectTries: 0,
 }

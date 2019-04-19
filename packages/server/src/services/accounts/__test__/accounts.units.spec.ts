@@ -2,16 +2,14 @@ import { compare } from 'bcrypt'
 import { verify } from 'jsonwebtoken'
 import MongoMemoryServer from 'mongodb-memory-server'
 import chance from 'utils/chance'
+import { genAccountParams } from 'utils/mocks/accounts.mocks'
 import { createTestBroker, loadAllServices, mockMongoServer, randEnvPort } from 'utils/testing'
 
-const genAccount = () => ({
-  email: chance.email(),
-  password: '123456',
-})
+jasmine.DEFAULT_TIMEOUT_INTERVAL = 600000
 
 describe('accounts service', () => {
   const broker = createTestBroker()
-  let mongoServer: MongoMemoryServer
+  let mongoServer: any
 
   beforeAll(async () => {
     mongoServer = await mockMongoServer()
@@ -120,7 +118,7 @@ describe('accounts service', () => {
     })
 
     it('should throw error if email is duplicated', async () => {
-      const accountParams = genAccount()
+      const accountParams = genAccountParams()
       try {
         await broker.call('accounts.createAccount', accountParams)
         await broker.call('accounts.createAccount', accountParams)
@@ -140,7 +138,7 @@ describe('accounts service', () => {
 
     it('should create successfully', async () => {
       expect.assertions(2)
-      const accountParams = genAccount()
+      const accountParams = genAccountParams()
       const account = await broker.call('accounts.createAccount', accountParams)
       expect(account).toMatchObject({ email: accountParams.email })
       expect(await compare(accountParams.password, account.password)).toBe(true)
@@ -184,7 +182,7 @@ describe('accounts service', () => {
     it(`should throw error if email doesn't exist on database`, async () => {
       expect.assertions(1)
       try {
-        await broker.call('accounts.signIn', genAccount)
+        await broker.call('accounts.signIn', genAccountParams)
       } catch (error) {
         expect(error).toMatchObject({
           code: 404,
@@ -196,7 +194,7 @@ describe('accounts service', () => {
 
     it(`should throw error if password is incorrect`, async () => {
       expect.assertions(1)
-      const accountParams = genAccount()
+      const accountParams = genAccountParams()
       try {
         await broker.call('accounts.createAccount', accountParams)
         await broker.call('accounts.signIn', {
@@ -216,7 +214,7 @@ describe('accounts service', () => {
 
     it('should return a valid JWT', async () => {
       expect.assertions(1)
-      const accountParams = genAccount()
+      const accountParams = genAccountParams()
 
       await broker.call('accounts.createAccount', accountParams)
       const jwt = await broker.call('accounts.signIn', accountParams)
@@ -233,7 +231,7 @@ describe('accounts service', () => {
       expect(account).toBeFalsy()
     })
     it('should return exactly context.meta.account value', async () => {
-      const accountParams = genAccount()
+      const accountParams = genAccountParams()
       const account = await broker.call(
         'accounts.authenticate',
         {},

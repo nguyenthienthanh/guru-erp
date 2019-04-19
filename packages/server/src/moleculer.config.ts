@@ -1,10 +1,9 @@
 'use strict'
+require('./utils/dotenv')()
 import { BrokerOptions, Errors } from 'moleculer'
 
 // tslint:disable-next-line:import-name
 import YupValidator from 'utils/moleculer-yup-validator'
-
-require('utils/dotenv.js')()
 
 /**
  * Moleculer ServiceBroker configuration file

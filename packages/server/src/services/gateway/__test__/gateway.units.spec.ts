@@ -1,5 +1,7 @@
 import { createTestBroker, loadAllServices, mockMongoServer, randEnvPort } from 'utils/testing'
 
+jasmine.DEFAULT_TIMEOUT_INTERVAL = 600000
+
 describe('gateway service', () => {
   const broker = createTestBroker()
 

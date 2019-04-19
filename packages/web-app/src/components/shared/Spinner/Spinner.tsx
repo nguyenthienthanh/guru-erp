@@ -1,7 +1,8 @@
 import React from 'react'
 
-import { CircularProgress } from '@material-ui/core'
+import { CircularProgress, LinearProgress } from '@material-ui/core'
 import { CircularProgressProps } from '@material-ui/core/CircularProgress'
+import { LinearProgressProps } from '@material-ui/core/LinearProgress'
 import { makeStyles } from '@material-ui/styles'
 import classnames from 'classnames'
 
@@ -24,32 +25,44 @@ export type SpinnerProps = {
    * Spinner variant
    * @default "default"
    */
-  variant?: 'default' | 'full-screen' | 'fill-parent' | 'overlay'
+  variant?: 'default' | 'full-screen' | 'fill-parent' | 'overlay' | 'overlay-linear'
   circularProgressProps?: CircularProgressProps
+  color?: CircularProgressProps['color'] | LinearProgressProps['color']
 }
 
-const Spinner = ({ variant, circularProgressProps }: SpinnerProps) => {
+const Spinner = ({ variant, circularProgressProps, color }: SpinnerProps) => {
   const classes = useStyles()
+
+  const props = {
+    color,
+    ...circularProgressProps,
+  }
 
   switch (variant) {
     case 'full-screen':
-      return <FullScreenSpinner {...circularProgressProps} />
+      return <FullScreenSpinner {...props} />
     case 'fill-parent':
       return (
         <div className={classnames(classes.root, classes.fillParent)}>
-          <CircularProgress {...circularProgressProps} />
+          <CircularProgress {...props} />
         </div>
       )
     case 'overlay':
       return (
         <div className={classnames(classes.root, classes.overlay)}>
-          <CircularProgress {...circularProgressProps} />
+          <CircularProgress {...props} />
+        </div>
+      )
+    case 'overlay-linear':
+      return (
+        <div className={classnames(classes.root, classes.overlayLinear)}>
+          <LinearProgress style={{ width: '100%' }} color={color as any} />
         </div>
       )
 
     case 'default':
     default:
-      return <CircularProgress {...circularProgressProps} />
+      return <CircularProgress {...props} />
   }
 }
 
@@ -72,6 +85,16 @@ const useStyles = makeStyles(() => ({
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center',
+    zIndex: 1,
+  },
+  overlayLinear: {
+    position: 'absolute',
+    top: 0,
+    left: 0,
+    bottom: 0,
+    right: 0,
+    backgroundColor: 'rgba(245, 245, 245, 0.5)',
+    display: 'flex',
     zIndex: 1,
   },
 }))

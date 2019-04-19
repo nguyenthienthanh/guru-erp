@@ -3,6 +3,7 @@
   "editor.tabSize": 2,
   "cSpell.words": [
     "Backoff",
+    "Collab",
     "Dropzone",
     "Dương",
     "Formik",
@@ -39,6 +40,7 @@
     "mixins",
     "moleculer",
     "moleculerjs",
+    "mongod",
     "nats",
     "org's",
     "orgs",
