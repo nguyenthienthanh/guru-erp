@@ -4,7 +4,8 @@
   "license": "GPL",
   "scripts": {
     "clean": "lerna clean -y && rm -f {packages/*/,}yarn.lock",
-    "reinstall": "yarn clean && lerna bootstrap"
+    "reinstall": "yarn clean && lerna bootstrap",
+    "build": "yarn workspace @guru-erp/server build"
   },
   "devDependencies": {
     "@commitlint/cli": "7.5.2",
