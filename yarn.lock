@@ -4144,7 +4144,7 @@ argparse@^1.0.7:
   dependencies:
     sprintf-js "~1.0.2"
 
-args@^5.0.0:
+args@^5.0.1:
   version "5.0.1"
   resolved "https://registry.yarnpkg.com/args/-/args-5.0.1.tgz#4bf298df90a4799a09521362c579278cc2fdd761"
   integrity sha512-1kqmFCFsPffavQFGt8OxJdIcETti99kySRUPMpOhaGjL6mRJn8HFU1OxKY5bMqfZKUwTQc1mZkAjmGYaVOHFtQ==
@@ -5094,7 +5094,7 @@ bluebird@3.5.1:
   resolved "https://registry.yarnpkg.com/bluebird/-/bluebird-3.5.1.tgz#d9551f9de98f1fcda1e683d17ee91a0602ee2eb9"
   integrity sha512-MKiLiV+I1AA596t9w1sQJ8jkiSr5+ZKi0WKrYGUn6d1Fx+Ij4tIj+m2WMQSGczs5jZVxV339chE8iwk6F64wjA==
 
-bluebird@^3.3.5, bluebird@^3.5.1, bluebird@^3.5.3:
+bluebird@3.5.4, bluebird@^3.3.5, bluebird@^3.5.1, bluebird@^3.5.3:
   version "3.5.4"
   resolved "https://registry.yarnpkg.com/bluebird/-/bluebird-3.5.4.tgz#d6cc661595de30d5b3af5fcedd3c0b3ef6ec5714"
   integrity sha512-FG+nFEZChJrbQ9tIccIfZJBz3J7mLrAhxakAbnrJWn8d7aKOC+LWifa0G+p4ZqKp4y13T7juYvdhq9NzKdsrjw==
@@ -8250,7 +8250,7 @@ fast-safe-stringify@^2.0.4:
   resolved "https://registry.yarnpkg.com/fast-safe-stringify/-/fast-safe-stringify-2.0.6.tgz#04b26106cc56681f51a044cfc0d76cf0008ac2c2"
   integrity sha512-q8BZ89jjc+mz08rSxROs8VsrBBcn1SIw1kq9NjolL509tkABRk9io01RAjSaEv1Xb2uFLt8VtRiZbGp5H8iDtg==
 
-fastest-validator@^0.6.15:
+fastest-validator@^0.6.17:
   version "0.6.17"
   resolved "https://registry.yarnpkg.com/fastest-validator/-/fastest-validator-0.6.17.tgz#15a8eef2c7c5a3268e4689dfd4a4b6553f0ff8b1"
   integrity sha512-XkdrjNbXwFJSn8s8dceofnA2ZHppfXtbTHP2dO2jXHZfm2GWP55VQBx/0UKWxfFfdWqmJv4ppBzuf342h5bahw==
@@ -12711,17 +12711,17 @@ moleculer-web@0.9.0-beta2:
     qs "^6.6.0"
     serve-static "^1.13.2"
 
-moleculer@0.13.8:
-  version "0.13.8"
-  resolved "https://registry.yarnpkg.com/moleculer/-/moleculer-0.13.8.tgz#bce352e0ee8e5dc508192a0df4abd72c6c633718"
-  integrity sha512-Er6ja5vtnQQhh6P9iXgTDOkq1xi2Wd64PCGEcIS5EZnRlM5Nl+kBJMhOfXMgfZyRLvF9kr4nnaimzAVrYz8tMg==
+moleculer@0.13.9:
+  version "0.13.9"
+  resolved "https://registry.yarnpkg.com/moleculer/-/moleculer-0.13.9.tgz#e89728c276318708da6a25fccaec9c29e72a90e1"
+  integrity sha512-U93p7iQs345A5LbZxZAQymubnTX48ylLxoCdnTq8UuF/Ce1cofXp4U1Qv/y4n8zAJd5N5pn5wKpbWeKcGmDoZw==
   dependencies:
-    args "^5.0.0"
-    bluebird "^3.5.3"
+    args "^5.0.1"
+    bluebird "3.5.4"
     chalk "^2.4.2"
     es6-error "^4.1.1"
     eventemitter2 "^5.0.1"
-    fastest-validator "^0.6.15"
+    fastest-validator "^0.6.17"
     glob "^7.1.3"
     ipaddr.js "^1.9.0"
     lodash "^4.17.11"

@@ -56,7 +56,7 @@
     "ioredis": "4.9.0",
     "jsonwebtoken": "8.5.1",
     "lodash": "4.17.11",
-    "moleculer": "0.13.8",
+    "moleculer": "0.13.9",
     "moleculer-apollo-server": "moleculerjs/moleculer-apollo-server",
     "moleculer-web": "0.9.0-beta2",
     "mongoose": "5.5.2",
