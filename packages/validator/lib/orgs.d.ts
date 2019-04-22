@@ -6,7 +6,7 @@ export declare const createOrgParams: Yup.ObjectSchema<Yup.Shape<{}, {
     name: string;
     namespace: string;
 }>>;
-export declare const findOrgByIdOrNamespaceParams: Yup.ObjectSchema<{
+export declare const findOrgByIdOrNamespaceParams: Yup.ObjectSchema<Yup.Shape<{}, {
     namespace: string;
     id: string;
-}>;
+}>>;

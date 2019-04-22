@@ -17,6 +17,7 @@ stories.add('Spinner', () => {
       'full-screen': 'full-screen',
       'fill-parent': 'fill-parent',
       overlay: 'overlay',
+      'overlay-linear': 'overlay-linear',
     },
     'default',
   ) as SpinnerProps['variant']

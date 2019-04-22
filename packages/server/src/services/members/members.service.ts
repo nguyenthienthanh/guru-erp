@@ -29,6 +29,12 @@ const membersService: ServiceSchema = {
               accountId: 'id',
             },
           },
+          availability: {
+            action: 'members.getMemberAvailabilityByLastActivity',
+            rootParams: {
+              lastActivity: 'lastActivity',
+            },
+          },
         },
       },
     },

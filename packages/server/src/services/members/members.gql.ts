@@ -8,8 +8,9 @@ const memberGql = gql`
     org: Org
     membership: String
     roles: [String]
-    lastActivity: Date
     availability: String
+    lastActivity: Date
+    createdAt: Date
   }
 `
 

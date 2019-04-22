@@ -23,11 +23,11 @@ jobs:
 
       # run tests!
       - run: |
+          export REACT_APP_SERVER_URI=https://guru-erp-server-pr-$CI_PULL_REQUEST.herokuapp.com/graphql
           yarn workspace @guru-erp/locales build
           yarn workspace @guru-erp/web test
           yarn workspace @guru-erp/desktop test
-          yarn workspace @guru-erp/web build
-          yarn workspace @guru-erp/server test
+          LOGLEVEL=silent yarn workspace @guru-erp/server test
           yarn workspace @guru-erp/validator test
 
       - save_cache:

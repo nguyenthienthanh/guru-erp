@@ -4,6 +4,7 @@ import { useCreateOrgMutation } from '@guru-erp/react-apollo'
 import { createOrgParams } from '@guru-erp/validator'
 import { Typography } from '@material-ui/core'
 import { Field, FieldProps, Formik, FormikActions } from 'formik'
+import Helmet from 'react-helmet'
 import { useTranslation } from 'react-i18next'
 import { WORK_PATH } from 'routes'
 import useRouter from 'use-react-router'
@@ -25,6 +26,7 @@ const CreateOrg = () => {
 
   return (
     <>
+      <Helmet title={t('create_org')} />
       <CreateOrgLayout
         formTitle="Business info"
         formFields={({ TextField, setLoading }) => {
@@ -58,6 +60,7 @@ const CreateOrg = () => {
                   <Field name="name">
                     {({ field }: FieldProps<FormValues>) => (
                       <TextField
+                        autoFocus
                         label="Business name"
                         name={field.name}
                         onChange={field.onChange}

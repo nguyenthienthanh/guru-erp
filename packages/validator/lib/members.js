@@ -12,7 +12,7 @@ const accounts_1 = require("./accounts");
 const common_1 = require("./common");
 const orgs_1 = require("./orgs");
 const USERNAME_MIN_LENGTH = 3;
-const USERNAME_MAX_LENGTH = 24;
+const USERNAME_MAX_LENGTH = 16;
 exports.memberId = common_1.objectId;
 exports.username = Yup.string()
     .min(USERNAME_MIN_LENGTH)
@@ -30,5 +30,8 @@ exports.updateMemberRolesParams = Yup.object().shape({
     roles: Yup.array(Yup.string())
         .min(1)
         .required(),
+});
+exports.findMembersByAccountIdParams = Yup.object().shape({
+    accountId: accounts_1.accountId.required(),
 });
 //# sourceMappingURL=members.js.map

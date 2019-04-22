@@ -5,6 +5,7 @@ import { useCreateAccountMutation } from '@guru-erp/react-apollo'
 import { createAccountParams } from '@guru-erp/validator'
 import { Typography } from '@material-ui/core'
 import { Field, FieldProps, Formik } from 'formik'
+import Helmet from 'react-helmet'
 import { useTranslation } from 'react-i18next'
 import { Link } from 'react-router-dom'
 import { SIGN_IN_PATH } from 'routes'
@@ -26,92 +27,95 @@ const SignUp = () => {
   const { history } = useRouter()
 
   return (
-    <SignInSignUpLayout
-      formTitle="Sign up"
-      form={({ TextField, SubmitButton, setLoading }) => (
-        <Formik
-          initialValues={initialValues}
-          validationSchema={createAccountParams}
-          onSubmit={(values, actions) => {
-            setLoading(true)
+    <>
+      <Helmet title={t('auth:sign_up')} />
+      <SignInSignUpLayout
+        formTitle="Sign up"
+        form={({ TextField, SubmitButton, setLoading }) => (
+          <Formik
+            initialValues={initialValues}
+            validationSchema={createAccountParams}
+            onSubmit={(values, actions) => {
+              setLoading(true)
 
-            handleCreateAccount({ variables: values })
-              .then(({ data }) => {
-                history.push(SIGN_IN_PATH, {
-                  email: data && data.createAccount.email,
+              handleCreateAccount({ variables: values })
+                .then(({ data }) => {
+                  history.push(SIGN_IN_PATH, {
+                    email: data && data.createAccount.email,
+                  })
                 })
-              })
-              .catch((error) => {
-                actions.setErrors(parseGraphQLErrors(error.graphQLErrors))
-                setLoading(false)
-              })
-          }}
-          validate={({ password, verify }) => {
-            if (password && password !== verify) {
-              return {
-                verify: 'accounts:verify_password_not_match',
+                .catch((error) => {
+                  actions.setErrors(parseGraphQLErrors(error.graphQLErrors))
+                  setLoading(false)
+                })
+            }}
+            validate={({ password, verify }) => {
+              if (password && password !== verify) {
+                return {
+                  verify: 'accounts:verify_password_not_match',
+                }
               }
-            }
-          }}
-        >
-          {(form) => (
-            <>
-              <Field name="email">
-                {({ field }: FieldProps<SignUpValues>) => (
-                  <TextField
-                    autoFocus
-                    label="Email"
-                    name={field.name}
-                    onChange={field.onChange}
-                    value={field.value}
-                    helperText={getFieldError(field.name, form, t)}
-                    error={isFieldError(field.name, form)}
-                  />
-                )}
-              </Field>
-              <Field name="password">
-                {({ field }: FieldProps<SignUpValues>) => (
-                  <TextField
-                    label="Password"
-                    type="password"
-                    name={field.name}
-                    onChange={field.onChange}
-                    value={field.value}
-                    helperText={getFieldError(field.name, form, t)}
-                    error={isFieldError(field.name, form)}
-                  />
-                )}
-              </Field>
-              <Field name="verify">
-                {({ field }: FieldProps<SignUpValues>) => (
-                  <TextField
-                    label="Verify password"
-                    type="password"
-                    name={field.name}
-                    onChange={field.onChange}
-                    value={field.value}
-                    helperText={getFieldError(field.name, form, t)}
-                    error={isFieldError(field.name, form)}
-                  />
-                )}
-              </Field>
-              <SubmitButton onClick={form.submitForm}>Sign up</SubmitButton>
-            </>
-          )}
-        </Formik>
-      )}
-      image={Collab}
-      bottomText={
-        <>
-          <Typography variant="body2" display="inline" color="textSecondary">
-            Already have account?
-          </Typography>{' '}
-          <Typography display="inline" color="textPrimary">
-            <Link to="/auth/sign-in">Sign in</Link>
-          </Typography>
-        </>
-      }
-    />
+            }}
+          >
+            {(form) => (
+              <>
+                <Field name="email">
+                  {({ field }: FieldProps<SignUpValues>) => (
+                    <TextField
+                      autoFocus
+                      label="Email"
+                      name={field.name}
+                      onChange={field.onChange}
+                      value={field.value}
+                      helperText={getFieldError(field.name, form, t)}
+                      error={isFieldError(field.name, form)}
+                    />
+                  )}
+                </Field>
+                <Field name="password">
+                  {({ field }: FieldProps<SignUpValues>) => (
+                    <TextField
+                      label="Password"
+                      type="password"
+                      name={field.name}
+                      onChange={field.onChange}
+                      value={field.value}
+                      helperText={getFieldError(field.name, form, t)}
+                      error={isFieldError(field.name, form)}
+                    />
+                  )}
+                </Field>
+                <Field name="verify">
+                  {({ field }: FieldProps<SignUpValues>) => (
+                    <TextField
+                      label="Verify password"
+                      type="password"
+                      name={field.name}
+                      onChange={field.onChange}
+                      value={field.value}
+                      helperText={getFieldError(field.name, form, t)}
+                      error={isFieldError(field.name, form)}
+                    />
+                  )}
+                </Field>
+                <SubmitButton onClick={form.submitForm}>Sign up</SubmitButton>
+              </>
+            )}
+          </Formik>
+        )}
+        image={Collab}
+        bottomText={
+          <>
+            <Typography variant="body2" display="inline" color="textSecondary">
+              Already have account?
+            </Typography>{' '}
+            <Typography display="inline" color="textPrimary">
+              <Link to="/auth/sign-in">Sign in</Link>
+            </Typography>
+          </>
+        }
+      />
+    </>
   )
 }
 

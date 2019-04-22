@@ -89,5 +89,6 @@
   "files.eol": "\r\n",
   "files.insertFinalNewline": true,
   "terminal.integrated.fontFamily": "Menlo, Monaco, 'Courier New', monospace",
-  "eslint.enable": false
+  "eslint.enable": false,
+  "prettier.endOfLine": "lf"
 }

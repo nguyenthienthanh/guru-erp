@@ -28,7 +28,8 @@
         "moleculerDbAdapterMongoose": "MongooseAdapter",
         "mongodbMemoryServer": "MongoMemoryServer",
         "classnames": "classNames",
-        "useReactRouter": "useRouter"
+        "useReactRouter": "useRouter",
+        "reactHelmet": "Helmet"
       }
     ],
     "align": {

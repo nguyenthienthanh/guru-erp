@@ -17,8 +17,9 @@ type Member {
   org: Org
   membership: String
   roles: [String]
-  lastActivity: Date
   availability: String
+  lastActivity: Date
+  createdAt: Date
 }
 
 type Mutation {
@@ -45,5 +46,6 @@ type Org {
 
 type Query {
   authenticate: Account
+  findCurrentAccountMembers: [Member]
   findOrgByIdOrNamespace(id: ID, namespace: String): Org
 }

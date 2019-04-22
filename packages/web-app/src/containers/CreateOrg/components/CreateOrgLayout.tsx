@@ -4,12 +4,12 @@ import HappyFeeling from '@guru-erp/illustrations/lib/undraw/HappyFeeling'
 import {
   Button,
   Container,
+  Fade,
   Grid,
   makeStyles,
   TextField,
   Theme,
   Typography,
-  Fade,
 } from '@material-ui/core'
 import { ButtonProps } from '@material-ui/core/Button'
 import { OutlinedTextFieldProps } from '@material-ui/core/TextField'
@@ -28,7 +28,7 @@ export type CreateOrgLayoutProps = {
 }
 
 const CreateOrgLayout = (props: CreateOrgLayoutProps) => {
-  const account = useCurrentAccount()
+  useCurrentAccount()
 
   const classes = useStyles()
 

@@ -18,6 +18,7 @@ export const orgNamespace = Yup.string()
   .min(ORG_NAMESPACE_MIN_LENGTH)
   .max(ORG_NAMESPACE_MAX_LENGTH)
   .lowercase()
+  .strict(true)
   .trim()
   .matches(/^([a-z0-9])+$/, { message: 'org_namespace_is_invalid' })
 
@@ -26,7 +27,7 @@ export const createOrgParams = Yup.object().shape({
   namespace: orgNamespace.required(),
 })
 
-export const findOrgByIdOrNamespaceParams = Yup.object({
+export const findOrgByIdOrNamespaceParams = Yup.object().shape({
   namespace: orgName,
   id: Yup.string().when('namespace', {
     is: (ns: string) => !ns,

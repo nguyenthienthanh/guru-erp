@@ -5,7 +5,7 @@ import { objectId } from './common'
 import { orgId } from './orgs'
 
 const USERNAME_MIN_LENGTH = 3
-const USERNAME_MAX_LENGTH = 24
+const USERNAME_MAX_LENGTH = 16
 
 export const memberId = objectId
 
@@ -28,4 +28,8 @@ export const updateMemberRolesParams = Yup.object().shape({
   roles: Yup.array(Yup.string())
     .min(1)
     .required(),
+})
+
+export const findMembersByAccountIdParams = Yup.object().shape({
+  accountId: accountId.required(),
 })

@@ -195,4 +195,9 @@ describe('Test members service', () => {
       expect(member2.username.startsWith('mem.')).toBe(true)
     })
   })
+
+  describe('Test members.findMembersByAccountId', () => {
+    // TODO: Write test
+    it(`should found created members`, async () => {})
+  })
 })
