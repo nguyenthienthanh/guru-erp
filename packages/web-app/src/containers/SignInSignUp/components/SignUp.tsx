@@ -41,7 +41,7 @@ const SignUp = () => {
               handleCreateAccount({ variables: values })
                 .then(({ data }) => {
                   history.push(SIGN_IN_PATH, {
-                    email: data && data.createAccount.email,
+                    email: data && data.createdAccount.email,
                   })
                 })
                 .catch((error) => {

@@ -8,7 +8,7 @@ import useRouter from 'use-react-router'
 const useCurrentAccount = () => {
   const { history } = useRouter()
   const { data } = useAuthenticateQuery({ suspend: true })
-  const currentAccount = get(data, 'authenticate')
+  const currentAccount = data && data.account
   if (!currentAccount) {
     history.push(AUTH_PATH)
   }

@@ -5,7 +5,7 @@ import { IAccount } from '@guru-erp/interfaces'
 
 const AUTHENTICATE_QUERY = gql`
   query Authenticate {
-    authenticate {
+    account: authenticate {
       id
       email
       avatar
@@ -14,7 +14,7 @@ const AUTHENTICATE_QUERY = gql`
 `
 
 interface Data {
-  authenticate: {
+  account: {
     id: IAccount['id']
     email: IAccount['email']
     avatar: IAccount['avatar']

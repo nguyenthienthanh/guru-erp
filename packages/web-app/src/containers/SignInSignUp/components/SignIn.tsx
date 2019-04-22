@@ -51,7 +51,7 @@ const SignIn = () => {
               setLoading(true)
               handleSignIn({ variables: values })
                 .then(({ data }) => {
-                  const token = data && data.signIn
+                  const token = data && data.accessToken
 
                   if (token) {
                     setCookie(ACCESS_TOKEN_COOKIE, token, { path: '/' })

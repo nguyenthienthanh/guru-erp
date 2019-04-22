@@ -7,7 +7,7 @@ const graphql_tag_1 = __importDefault(require("graphql-tag"));
 const react_apollo_hooks_1 = require("react-apollo-hooks");
 const CREATE_ACCOUNT_MUTATION = graphql_tag_1.default `
   mutation CreateAccount($email: String!, $password: String!) {
-    createAccount(email: $email, password: $password) {
+    createdAccount: createAccount(email: $email, password: $password) {
       id
       email
     }

@@ -1,6 +1,6 @@
 import { MutationHookOptions } from 'react-apollo-hooks';
 interface Data {
-    signIn: string;
+    accessToken: string;
 }
 interface Variables {
     email: string;

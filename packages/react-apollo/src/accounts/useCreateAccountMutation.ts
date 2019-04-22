@@ -5,7 +5,7 @@ import { IAccount } from '@guru-erp/interfaces'
 
 const CREATE_ACCOUNT_MUTATION = gql`
   mutation CreateAccount($email: String!, $password: String!) {
-    createAccount(email: $email, password: $password) {
+    createdAccount: createAccount(email: $email, password: $password) {
       id
       email
     }
@@ -13,7 +13,7 @@ const CREATE_ACCOUNT_MUTATION = gql`
 `
 
 interface Data {
-  createAccount: {
+  createdAccount: {
     id: IAccount['id']
     email: IAccount['email']
   }
