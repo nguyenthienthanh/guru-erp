@@ -20,7 +20,7 @@ export const createTheme = (type?: 'light' | 'dark') => {
       primary: {
         ...primary,
         light: '#3554A1',
-        main: '#111E93',
+        main: '#3554A1',
         dark: '#241F64',
       },
     },
@@ -72,6 +72,14 @@ export const createTheme = (type?: 'light' | 'dark') => {
           marginRight: 0,
         },
       },
+      MuiPaper: {
+        elevation1: {
+          boxShadow: '2px 2px 20px rgba(0, 0, 0, 0.1)',
+        },
+        elevation2: {
+          boxShadow: '2px 2px 20px rgba(0, 0, 0, 0.2)',
+        },
+      },
     },
     props: {
       MuiDivider: {
@@ -79,6 +87,9 @@ export const createTheme = (type?: 'light' | 'dark') => {
       },
       MuiContainer: {
         maxWidth: 'md',
+      },
+      MuiTypography: {
+        color: 'textPrimary',
       },
     } as ComponentsProps,
     mixins: {

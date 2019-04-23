@@ -1,7 +1,7 @@
 import { MutationHookOptions } from 'react-apollo-hooks';
 import { IAccount } from '@guru-erp/interfaces';
 interface Data {
-    createAccount: {
+    createdAccount: {
         id: IAccount['id'];
         email: IAccount['email'];
     };

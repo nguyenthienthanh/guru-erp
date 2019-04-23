@@ -85,7 +85,7 @@ describe('Test orgs service', () => {
       try {
         orgNamespace.validateSync('badSTring')
       } catch (error) {
-        expect(error.message).toBe('org_namespace_is_invalid')
+        expect(error.message).toBe('this must be a lowercase string')
       }
     })
     it('should validate correctly', () => {

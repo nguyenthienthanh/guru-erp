@@ -1,25 +1,25 @@
 import React from 'react'
 
 import { Container, makeStyles, Theme } from '@material-ui/core'
-import { Route, RouteComponentProps, Switch } from 'react-router'
+import { Redirect, Route, RouteComponentProps, Switch } from 'react-router'
+
+import { SIGN_IN_PATH, SIGN_UP_PATH } from 'routes'
 
 import Footer from './components/Footer'
 import SignIn from './components/SignIn'
 import SignUp from './components/SignUp'
 
 const SignInSignUp = (props: RouteComponentProps) => {
-  const classes = useStyles()
-
-  const {
-    match: { url },
-  } = props
+  const classes = useStyles(props)
 
   return (
     <Container maxWidth="lg">
       <aside className={classes.main}>
         <Switch>
-          <Route path={`${url}/sign-in`} component={SignIn} />
-          <Route path={`${url}/sign-up`} component={SignUp} />
+          <Route path={SIGN_IN_PATH} component={SignIn} />
+          <Route path={SIGN_UP_PATH} component={SignUp} />
+
+          <Redirect to={SIGN_IN_PATH} />
         </Switch>
       </aside>
       <Footer />

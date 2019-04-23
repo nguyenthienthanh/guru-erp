@@ -25,7 +25,7 @@ describe('mailer service', () => {
     await mongoServer.stop()
   })
 
-  it('should be able to send test email', async () => {
+  it.skip('should be able to send test email', async () => {
     expect.assertions(1)
     const msg = await broker.call('mailer.sendMail', {
       to: getServiceEnv('mailer', 'AUTH_USER'),

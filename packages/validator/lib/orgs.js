@@ -23,13 +23,14 @@ exports.orgNamespace = Yup.string()
     .min(ORG_NAMESPACE_MIN_LENGTH)
     .max(ORG_NAMESPACE_MAX_LENGTH)
     .lowercase()
+    .strict(true)
     .trim()
     .matches(/^([a-z0-9])+$/, { message: 'org_namespace_is_invalid' });
 exports.createOrgParams = Yup.object().shape({
     name: exports.orgName.required(),
     namespace: exports.orgNamespace.required(),
 });
-exports.findOrgByIdOrNamespaceParams = Yup.object({
+exports.findOrgByIdOrNamespaceParams = Yup.object().shape({
     namespace: exports.orgName,
     id: Yup.string().when('namespace', {
         is: (ns) => !ns,

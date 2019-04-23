@@ -4,7 +4,8 @@
   "license": "GPL",
   "scripts": {
     "clean": "lerna clean -y && rm -f {packages/*/,}yarn.lock",
-    "reinstall": "yarn clean && lerna bootstrap"
+    "reinstall": "yarn clean && lerna bootstrap",
+    "build": "yarn workspace @guru-erp/server build"
   },
   "devDependencies": {
     "@commitlint/cli": "7.5.2",
@@ -15,7 +16,7 @@
     "tslint": "5.16.0",
     "tslint-config-airbnb": "5.11.1",
     "tslint-config-prettier": "1.18.0",
-    "typescript": "3.4.3"
+    "typescript": "3.4.4"
   },
   "workspaces": [
     "packages/*"

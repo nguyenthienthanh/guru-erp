@@ -12,3 +12,6 @@ export declare const updateMemberRolesParams: Yup.ObjectSchema<Yup.Shape<{}, {
     memberId: string;
     roles: string[];
 }>>;
+export declare const findMembersByAccountIdParams: Yup.ObjectSchema<Yup.Shape<{}, {
+    accountId: string;
+}>>;

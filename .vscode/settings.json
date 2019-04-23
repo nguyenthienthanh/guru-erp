@@ -86,8 +86,17 @@
     { "languageId": "scss", "dictionaries": ["fonts", "css"] }
   ],
   "editor.rulers": [100, 120],
-  "files.eol": "\r\n",
+  "files.eol": "\n",
   "files.insertFinalNewline": true,
-  "terminal.integrated.fontFamily": "Menlo, Monaco, 'Courier New', monospace",
-  "eslint.enable": false
+  "eslint.enable": true,
+  "prettier.endOfLine": "lf",
+  "eslint.alwaysShowStatus": true,
+  "eslint.autoFixOnSave": true,
+  "eslint.packageManager": "yarn",
+  "eslint.validate": [
+    "javascript",
+    "javascriptreact",
+    { "language": "typescript", "autoFix": true },
+    { "language": "typescriptreact", "autoFix": true }
+  ]
 }

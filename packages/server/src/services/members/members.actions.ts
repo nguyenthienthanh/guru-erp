@@ -1,6 +1,12 @@
 import { cloneDeep, uniq } from 'lodash'
+import moment from 'moment'
 
-import { createMemberParams, updateMemberRolesParams } from '@guru-erp/validator'
+import { IMember } from '@guru-erp/interfaces'
+import {
+  createMemberParams,
+  findMembersByAccountIdParams,
+  updateMemberRolesParams,
+} from '@guru-erp/validator'
 import { Action } from 'local-types'
 import { Errors } from 'moleculer'
 import { MembersContext } from './members'
@@ -16,8 +22,8 @@ import Member from './members.model'
  * @param username
  * @returns A created member
  */
-// TODO: Add graphql mutation
 const createMember: Action = {
+  // TODO: Add graphql mutation
   params: createMemberParams,
   requiresAccount: true,
   async handler(ctx: MembersContext) {
@@ -159,11 +165,49 @@ const findMemberByOrgIdAndAccountId: Action = {
   },
 }
 
+const findMembersByAccountId: Action = {
+  params: findMembersByAccountIdParams,
+  async handler(ctx: MembersContext) {
+    const accountId: string = ctx.params.accountId
+
+    return Member.find({ accountId })
+  },
+}
+
+const findCurrentAccountMembers: Action = {
+  graphql: {
+    query: 'findCurrentAccountMembers: [Member]',
+  },
+  async handler(ctx: MembersContext) {
+    const accountId: string = ctx.meta.account.id
+
+    return ctx.call('members.findMembersByAccountId', { accountId })
+  },
+}
+
+const getMemberAvailabilityByLastActivity: Action = {
+  async handler(ctx: MembersContext): Promise<IMember['availability']> {
+    const lastActivity: any = ctx.params.lastActivity
+
+    const diffMinutes = moment().diff(lastActivity, 'minutes')
+    const diffDays = moment().diff(lastActivity, 'days')
+
+    // TODO: Do not hard code!
+
+    if (!lastActivity || diffDays >= 7) return 'inactive'
+    if (diffMinutes <= 5) return 'online'
+    return 'offline'
+  },
+}
+
 const membersActions = {
   createMember,
   updateMemberRoles,
   findMemberById,
   findMemberByOrgIdAndAccountId,
+  findMembersByAccountId,
+  findCurrentAccountMembers,
+  getMemberAvailabilityByLastActivity,
 }
 
 export default membersActions

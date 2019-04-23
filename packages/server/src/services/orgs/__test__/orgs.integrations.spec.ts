@@ -1,11 +1,5 @@
 import { IOrg } from '@guru-erp/interfaces'
 import { ServiceBroker } from 'moleculer'
-import MongoMemoryServer from 'mongodb-memory-server'
-import {
-  CREATE_ACCOUNT_MUTATION,
-  SIGN_IN_MUTATION,
-} from 'services/accounts/__test__/accounts.queries'
-import { genAccountParams } from 'utils/mocks/accounts.mocks'
 import { genOrgParams } from 'utils/mocks/orgs.mocks'
 import {
   createGqlClient,

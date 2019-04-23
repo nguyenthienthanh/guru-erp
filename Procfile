@@ -1,1 +1,1 @@
-web: cd packages/server && yarn build && yarn start:prod
+web: yarn workspace @guru-erp/server start:prod

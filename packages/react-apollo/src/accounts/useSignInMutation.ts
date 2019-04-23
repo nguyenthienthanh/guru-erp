@@ -3,12 +3,12 @@ import { MutationHookOptions, useMutation } from 'react-apollo-hooks'
 
 const SIGN_IN_MUTATION = gql`
   mutation SignIn($email: String!, $password: String!) {
-    signIn(email: $email, password: $password)
+    accessToken: signIn(email: $email, password: $password)
   }
 `
 
 interface Data {
-  signIn: string
+  accessToken: string
 }
 
 interface Variables {
