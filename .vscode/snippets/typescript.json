@@ -4,7 +4,7 @@
     "body": [
       "import { Action } from 'local-types'",
       "",
-      "const $1Actions = {}",
+      "const ${1:${TM_FILENAME/(.*)\\..+\\..+$/$1/}}Actions = {}",
       "",
       "export default $1Actions"
     ]
@@ -18,7 +18,7 @@
       "",
       "import { I$2 } from '@guru-erp/interfaces'",
       "",
-      "import $1Methods from './$1.methods'",
+      "import ${1:${TM_FILENAME/(.*)\\..+\\..+$/$1/}}Methods from './$1.methods'",
       "",
       "export type $2Document = Document & I$2",
       "export type $3Methods = typeof $1Methods",
@@ -31,12 +31,20 @@
 
   "Generate service methods": {
     "prefix": "svmethods",
-    "body": ["const $1Methods = {}", "", "export default $1Methods"]
+    "body": [
+      "const ${1:${TM_FILENAME/(.*)\\..+\\..+$/$1/}}Methods = {}",
+      "",
+      "export default ${1}Methods"
+    ]
   },
 
   "Generate service events": {
     "prefix": "svevents",
-    "body": ["const $1Events = {}", "", "export default $1Events"]
+    "body": [
+      "const ${1:${TM_FILENAME/(.*)\\..+\\..+$/$1/}}Events = {}",
+      "",
+      "export default $1Events"
+    ]
   },
 
   "Generate service gql": {
@@ -44,7 +52,7 @@
     "body": [
       "import gql from 'graphql-tag'",
       "",
-      "const $1Gql = gql`$2`",
+      "const ${1:${TM_FILENAME/(.*)\\..+\\..+$/$1/}}Gql = gql`$2`",
       "",
       "export default $1Gql"
     ]
@@ -56,7 +64,7 @@
       "import { getServiceEnv } from 'utils'",
       "import { createModel, createSchema } from 'utils/mongoose'",
       "",
-      "import { $1Document } from './$2'",
+      "import { ${1:${TM_FILENAME/(.*)\\..+\\..+$/$1/}}Document } from './$2'",
       "",
       "const $2Schema = createSchema({$3})",
       "",
@@ -78,7 +86,7 @@
       "",
       "import accesscontrolMixin from 'mixins/accesscontrol.mixin'",
       "",
-      "import $1Actions from './$1.actions'",
+      "import ${1:${TM_FILENAME/(.*)\\..+\\..+$/$1/}}Actions from './$1.actions'",
       "import $1Gql from './$1.gql'",
       "import $1Methods from './$1.methods'",
       "",
@@ -116,7 +124,7 @@
       "",
       "jasmine.DEFAULT_TIMEOUT_INTERVAL = 600000",
       "",
-      "describe('Test $1 service', () => {",
+      "describe('Test ${1:${TM_FILENAME/(.*)\\..+\\..+$/$1/}} service', () => {",
       "  let broker: ServiceBroker",
       "  let mongod: any",
       "  let gqlClient: TestGraphQLClient",
@@ -141,7 +149,7 @@
   },
 
   "Generate React Apollo hook": {
-    "prefix": "gqlhook",
+    "prefix": "gqlMutationHook",
     "body": [
       "import gql from 'graphql-tag'",
       "import { MutationHookOptions, useMutation } from 'react-apollo-hooks'",
@@ -154,7 +162,7 @@
       "",
       "interface Variables {$5}",
       "",
-      "export const use$2 = (opts?: MutationHookOptions<Data, Variables>) =>",
+      "export const ${TM_FILENAME} = (opts?: MutationHookOptions<Data, Variables>) =>",
       "  useMutation<Data, Variables>($1, opts)"
     ]
   }
