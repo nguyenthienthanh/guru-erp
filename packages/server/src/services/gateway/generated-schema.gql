@@ -46,6 +46,6 @@ type Org {
 
 type Query {
   authenticate: Account
-  findCurrentAccountMembers: [Member]
   findOrgByIdOrNamespace(id: ID, namespace: String): Org
+  findCurrentAccountMembers: [Member]
 }

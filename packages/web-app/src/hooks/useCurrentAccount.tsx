@@ -1,6 +1,3 @@
-import { get } from 'lodash'
-import React from 'react'
-
 import { useAuthenticateQuery } from '@guru-erp/react-apollo'
 import { AUTH_PATH } from 'routes'
 import useRouter from 'use-react-router'

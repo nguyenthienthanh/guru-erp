@@ -1,9 +1,8 @@
 import React from 'react'
 
-import { IMember, IOrg } from '@guru-erp/interfaces'
-import { IconButton, makeStyles, Paper, Theme, Typography } from '@material-ui/core'
+import { IMember } from '@guru-erp/interfaces'
+import { makeStyles, Paper, Theme, Typography } from '@material-ui/core'
 import MemberDisplayName from 'components/people/MemberDisplayName'
-import { DotsHorizontal } from 'mdi-material-ui'
 // tslint:disable-next-line:import-name
 import ReactAvatar from 'react-avatar'
 import { useTranslation } from 'react-i18next'
@@ -56,7 +55,7 @@ const OrgListItem = (props: OrgListItemProps) => {
   )
 }
 
-const useStyles = makeStyles(({ spacing, shape }: Theme) => ({
+const useStyles = makeStyles(({ spacing }: Theme) => ({
   root: {
     height: 280,
     position: 'relative',

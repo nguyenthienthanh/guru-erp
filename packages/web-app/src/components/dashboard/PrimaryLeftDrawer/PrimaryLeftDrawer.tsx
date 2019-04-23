@@ -1,9 +1,7 @@
 import React from 'react'
 
 import { Drawer, Grid, makeStyles, Theme } from '@material-ui/core'
-import Logo from 'components/shared/Logo'
 import { MINI_DRAWER_NAV_WIDTH } from 'constants/variables'
-import { GuitarAcoustic, GuitarElectric } from 'mdi-material-ui'
 import DarkThemeProvider from 'providers/DarkThemeProvider'
 import ListItem, { ListItemProps } from './components/ListItem'
 
@@ -17,8 +15,6 @@ type PrimaryLeftDrawerProps = {
 
 const PrimaryLeftDrawer = (props: PrimaryLeftDrawerProps) => {
   const classes = useStyles()
-
-  const [active, setActive] = React.useState(0)
 
   return (
     <Drawer variant="permanent" classes={{ paper: classes.drawerPaper }}>

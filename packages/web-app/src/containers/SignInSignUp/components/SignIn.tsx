@@ -17,12 +17,12 @@ import Helmet from 'react-helmet'
 import { WORK_PATH } from 'routes'
 import SignInSignUpLayout from './SignInSignUpLayout'
 
-type SignInValues = typeof initialValues
-
 const initialValues = {
   email: '',
   password: '',
 }
+
+type SignInValues = typeof initialValues
 
 const SignIn = () => {
   const { t } = useTranslation()
@@ -36,7 +36,7 @@ const SignIn = () => {
 
   React.useEffect(() => {
     if (cookies[ACCESS_TOKEN_COOKIE]) removeCookie(ACCESS_TOKEN_COOKIE, { path: '/' })
-  }, [])
+  }, [cookies, removeCookie])
 
   return (
     <>

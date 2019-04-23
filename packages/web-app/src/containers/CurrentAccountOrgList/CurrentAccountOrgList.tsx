@@ -3,7 +3,7 @@ import React from 'react'
 
 import { IMember } from '@guru-erp/interfaces'
 import { useFindCurrentAccountMembersQuery } from '@guru-erp/react-apollo'
-import { Container, Fade, Typography } from '@material-ui/core'
+import { Fade } from '@material-ui/core'
 import ContentContainer from 'components/dashboard/ContentContainer'
 import PageTitle from 'components/dashboard/PageTitle'
 import PrimaryLeftDrawer from 'components/dashboard/PrimaryLeftDrawer'

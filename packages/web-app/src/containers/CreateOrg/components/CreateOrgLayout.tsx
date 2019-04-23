@@ -32,18 +32,7 @@ const CreateOrgLayout = (props: CreateOrgLayoutProps) => {
 
   const classes = useStyles()
 
-  const [activeStep, setActiveStep] = React.useState(0)
   const [loading, setLoading] = React.useState(false)
-
-  const goNextStep = () => {
-    if (activeStep > 2) return
-    setActiveStep(activeStep + 1)
-  }
-
-  const goPrevStep = () => {
-    if (activeStep < 0) return
-    setActiveStep(activeStep - 1)
-  }
 
   return (
     <Fade in>
@@ -100,7 +89,6 @@ const CreateOrgLayout = (props: CreateOrgLayoutProps) => {
                         variant="contained"
                         className={classes.nextButton}
                         disabled={loading}
-                        onClick={goNextStep}
                         disableRipple
                         {...props}
                       >

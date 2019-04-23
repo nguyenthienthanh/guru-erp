@@ -27,7 +27,7 @@ const Logo = (props: LogoProps) => {
 
   return (
     <Link to="/" className={classes.root}>
-      <img src={logoSvg} className={classes.img} style={imgStyle} />
+      <img src={logoSvg} className={classes.img} style={imgStyle} alt="Guru ERP" />
       {!props.hideText && (
         <Typography variant="h5" className={classes.text} style={textStyle}>
           Guru ERP

@@ -7,8 +7,8 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "storybook": "start-storybook -p 3001",
-    "storybook:build": "build-storybook -c .storybook -o build/storybook"
+    "storybook": "NODE_PATH=src start-storybook -p 3001",
+    "storybook:build": "NODE_PATH=src build-storybook --quiet -c .storybook -o build/storybook"
   },
   "dependencies": {
     "@material-ui/core": "4.0.0-alpha.8",
@@ -19,7 +19,6 @@
     "formik": "1.5.2",
     "i18next": "15.0.9",
     "i18next-xhr-backend": "2.0.1",
-    "jest": "23.6.0",
     "jest-dom": "3.1.3",
     "lodash": "4.17.11",
     "mdi-material-ui": "5.11.0",
@@ -30,7 +29,7 @@
     "react-helmet": "5.2.0",
     "react-i18next": "10.8.1",
     "react-router-dom": "5.0.0",
-    "react-scripts": "2.1.8",
+    "react-scripts": "3.0.0",
     "react-testing-library": "6.1.2",
     "typeface-roboto": "0.0.54",
     "typescript": "3.4.4",
@@ -48,7 +47,7 @@
     "@storybook/addon-viewport": "5.0.10",
     "@storybook/react": "5.1.0-alpha.32",
     "@types/classnames": "2.2.7",
-    "@types/jest": "23.3.14",
+    "@types/jest": "24.0.11",
     "@types/lodash": "4.14.123",
     "@types/node": "11.13.7",
     "@types/react": "16.8.14",
