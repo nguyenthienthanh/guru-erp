@@ -42,7 +42,7 @@
     "ts-node": "8.1.0",
     "ts-node-dev": "1.0.0-pre.32",
     "tslint": "5.16.0",
-    "typescript": "3.4.4"
+    "typescript": "3.4.5"
   },
   "dependencies": {
     "accesscontrol": "2.2.1",

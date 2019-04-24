@@ -32,7 +32,7 @@
     "react-scripts": "3.0.0",
     "react-testing-library": "6.1.2",
     "typeface-roboto": "0.0.54",
-    "typescript": "3.4.4",
+    "typescript": "3.4.5",
     "use-react-router": "1.0.5",
     "voca": "1.4.0"
   },
