@@ -42,10 +42,12 @@ type Org {
 
   """resolved member by createdByAccountId and id"""
   createdByMember: Member
+  rolesGrants: JSON
 }
 
 type Query {
   authenticate: Account
-  findOrgByIdOrNamespace(id: ID, namespace: String): Org
   findCurrentAccountMembers: [Member]
+  getPermission(action: String!, possession: String!, resource: String!): JSON
+  findOrgByIdOrNamespace(id: ID, namespace: String): Org
 }

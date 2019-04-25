@@ -3,6 +3,10 @@
   "version": "0.0.0",
   "description": "My Moleculer microservices project",
   "scripts": {
+    "make:git-info": "node git-repo-info.js",
+    "prebuild": "yarn make:git-info",
+    "prestart": "yarn make:git-info",
+    "pretest": "yarn make:git-info",
     "build": "tsc",
     "dev": "NODE_ENV=development ts-node-dev --respawn --transpileOnly -r tsconfig-paths/register ./node_modules/.bin/moleculer-runner --repl --config src/moleculer.config.ts src/services/**/*.service.ts",
     "cli": "moleculer connect NATS",
@@ -32,6 +36,7 @@
     "@types/yup": "0.26.12",
     "dotenv": "7.0.0",
     "get-port": "5.0.0",
+    "git-repo-info": "2.1.0",
     "graphql-request": "1.8.2",
     "jest": "24.7.1",
     "jest-cli": "24.7.1",
