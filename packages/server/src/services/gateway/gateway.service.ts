@@ -9,15 +9,14 @@ import { Context, ServiceSchema } from 'moleculer'
 import { ApolloService } from 'moleculer-apollo-server'
 // tslint:disable-next-line:import-name
 import ApiGateway from 'moleculer-web'
-import gitRepoInfo from 'utils/git-repo-info'
 
 const gatewayService: ServiceSchema = {
   name: 'gateway',
 
   dependencies: ['accounts'],
+
   mixins: [
-    ApiGateway,
-    // GraphQL Apollo Server
+    ApiGateway, // GraphQL Apollo Server
     ApolloService({
       // Global GraphQL typeDefs
       typeDefs: gql`
@@ -35,14 +34,6 @@ const gatewayService: ServiceSchema = {
         cors: true,
         mappingPolicy: 'restrict',
         async onBeforeCall(ctx: Context, route: string, req: any, res: ServerResponse) {
-          const info = await gitRepoInfo()
-          if (info) {
-            res.setHeader('x-server-version', info.version)
-            // COMMIT_HASH is env in heroku
-            const gitSHA = info.sha
-            if (gitSHA) res.setHeader('x-server-sha', gitSHA)
-          }
-
           const accessToken =
             req.headers['x-access-token'] || req.query['accessToken'] || req.query['token']
 
