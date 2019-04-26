@@ -3,6 +3,10 @@
   "version": "0.0.0",
   "description": "My Moleculer microservices project",
   "scripts": {
+    "make:git-info": "node scripts/git-repo-info.js",
+    "prestart": "yarn make:git-info",
+    "prebuild": "yarn make:git-info",
+    "pretest": "yarn make:git-info",
     "build": "tsc",
     "dev": "NODE_ENV=development ts-node-dev --respawn --transpileOnly -r tsconfig-paths/register ./node_modules/.bin/moleculer-runner --repl --config src/moleculer.config.ts src/services/**/*.service.ts",
     "cli": "moleculer connect NATS",
