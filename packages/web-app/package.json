@@ -16,7 +16,7 @@
     "@material-ui/styles": "4.0.0-alpha.8",
     "apollo-link-context": "1.0.17",
     "constate": "1.1.1",
-    "formik": "1.5.2",
+    "formik": "1.5.3",
     "i18next": "15.1.0",
     "i18next-xhr-backend": "2.0.1",
     "jest-dom": "3.1.3",
