@@ -3,6 +3,10 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
+    "make:git-info": "node scripts/git-repo-info.js",
+    "prestart": "yarn make:git-info",
+    "prebuild": "yarn make:git-info",
+    "pretest": "yarn make:git-info",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
