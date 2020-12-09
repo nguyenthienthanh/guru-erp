@@ -54,7 +54,7 @@
     "@types/react-dom": "16.8.4",
     "@types/react-helmet": "5.0.8",
     "@types/react-router-dom": "4.3.2",
-    "@types/storybook__addon-actions": "3.4.2",
+    "@types/storybook__addon-actions": "3.4.3",
     "@types/storybook__addon-info": "4.1.1",
     "@types/storybook__addon-knobs": "5.0.0",
     "@types/storybook__react": "4.0.1",
