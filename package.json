@@ -8,8 +8,8 @@
     "build": "yarn workspace @guru-erp/server build"
   },
   "devDependencies": {
-    "@commitlint/cli": "7.5.2",
-    "@commitlint/config-conventional": "7.5.0",
+    "@commitlint/cli": "7.6.1",
+    "@commitlint/config-conventional": "7.6.0",
     "husky": "2.1.0",
     "lerna": "3.13.4",
     "prettier": "1.17.0",
