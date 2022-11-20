@@ -27,7 +27,7 @@
     "url": "https://github.com/targeek/guru-erp/issues"
   },
   "devDependencies": {
-    "@types/react": "16.8.14",
+    "@types/react": "16.14.34",
     "rimraf": "2.6.3",
     "typescript": "3.4.5"
   },
