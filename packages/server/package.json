@@ -19,7 +19,7 @@
   "author": "",
   "devDependencies": {
     "@types/bcrypt": "3.0.0",
-    "@types/bluebird": "3.5.26",
+    "@types/bluebird": "3.5.42",
     "@types/chance": "1.0.2",
     "@types/dotenv": "6.1.1",
     "@types/graphql": "14.2.0",
