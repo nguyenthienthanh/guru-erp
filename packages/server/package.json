@@ -47,7 +47,7 @@
   "dependencies": {
     "accesscontrol": "2.2.1",
     "axios": "0.18.0",
-    "bcrypt": "3.0.6",
+    "bcrypt": "5.0.0",
     "chalk": "2.4.2",
     "chance": "1.0.18",
     "graphql": "14.2.1",
