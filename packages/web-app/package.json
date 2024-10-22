@@ -37,7 +37,7 @@
     "voca": "1.4.0"
   },
   "devDependencies": {
-    "@babel/core": "7.4.3",
+    "@babel/core": "7.25.9",
     "@storybook/addon-a11y": "5.0.10",
     "@storybook/addon-actions": "5.1.0-alpha.34",
     "@storybook/addon-console": "1.1.0",
